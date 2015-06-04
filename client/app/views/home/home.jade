@@ -1,0 +1,13 @@
+.module-home-page
+    .bold-text(make-bold data-name="Holidays Lists") 
+    .holidaylist
+        .holidays-empty(ng-if="Holidays.length == 0")
+            | No Holidays Exists
+        .holidayslistitem(ng-repeat="holidayitem in Holidays")
+            .holidadate  {{holidayitem.DD}}/{{holidayitem.MM}}/{{holidayitem.YYYY}}
+            .action-btns
+                input(type="button" ng-click="deleteHoliday(holidayitem._id,$event)" value="Delete" data-item-id="{{holidayitem._id}}")
+            .clear-fix
+    .add-holiday
+        input(type="text" placeholder="DD/MM/YYYY" ng-model="NewHoliday" style="padding-right:20px;")
+        input(type="button" value="Add Holiday" ng-click="addHoliday()")
