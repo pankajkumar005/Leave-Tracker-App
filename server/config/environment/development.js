@@ -5,7 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/leavetrackerapp-dev'
+    uri: 'mongodb://localhost:27017/leavetrackerdb'
   },
 
   seedDB: true
