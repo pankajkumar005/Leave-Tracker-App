@@ -1,0 +1,54 @@
+html
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation', ng-controller='NavbarCtrl')
+      .navbar-header
+        a.navbar-brand(href='#/') Leave Tracker
+      // Top Menu Items
+      ul.nav.navbar-right.top-nav
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown')
+            i.fa.fa-user
+            |  Shikha Jain 
+            b.caret
+          ul.dropdown-menu
+            li
+              a(href='#')
+                i.fa.fa-fw.fa-user
+                |  Profile
+            li
+              a(href='#')
+                i.fa.fa-fw.fa-envelope
+                |  Inbox
+            li
+              a(href='#')
+                i.fa.fa-fw.fa-gear
+                |  Settings
+            li.divider
+            li
+              a(href='#')
+                i.fa.fa-fw.fa-power-off
+                |  Log Out
+      // Sidebar Menu Items - These collapse to the responsive navigation menu on small screens
+      .collapse.navbar-collapse.navbar-ex1-collapse
+        ul.nav.navbar-nav.side-nav
+          li.active
+            a(href='#')
+              i.fa.fa-fw.fa-dashboard
+              |  Leave Tally
+          li
+            a(href='#/upcoming')
+              i.fa.fa-fw.fa-bar-chart-o
+              |  Upcoming
+          li
+            a(href='#/history')
+              i.fa.fa-fw.fa-table
+              |  History
+          li
+            a(href='#/request')
+              i.fa.fa-fw.fa-edit
+              |  Request
+          li
+            a(href='#/reports')
+              i.fa.fa-fw.fa-desktop
+              |  Leave Reports
+      // /.navbar-collapse
