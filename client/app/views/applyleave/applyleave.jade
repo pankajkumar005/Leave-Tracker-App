@@ -1,0 +1,29 @@
+h1.page-header.head Leave From
+form(ng-submit='submit()')
+	.col1
+		.from-date.floatleft
+			label From Date
+			br
+			input#fromdatepicker(type='text', ui-date)
+		.to-date.floatleft
+			label To Date
+			br
+			input#todatepicker(type='text')
+	.col1
+		.type.type-margin
+			label Type
+			br
+			select.leavetype
+				option(value='') Select Leave Type
+				option(value='PTO') Paid Time Off (PTO)
+				option(value='ML') Maternity Leave
+				option(value='PL') Paternity Leave
+				option(value='COF') Compensatory-Off
+	.col1
+		.description.desc-margin
+			label Description
+			br
+			textarea(cols="50", rows="4")
+	.frmbtn
+		button#leaveapply.btn.btn-primary() Apply
+		button#leavecancel.btn.btn-default(ng-click="cancleform()") Cancel

@@ -1,0 +1,917 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/home/shikhaj/Leave-Tracker-App',
+5 verbose install   [ 'express',
+5 verbose install     'morgan',
+5 verbose install     'body-parser',
+5 verbose install     'method-override',
+5 verbose install     'serve-favicon',
+5 verbose install     'cookie-parser',
+5 verbose install     'express-session',
+5 verbose install     'errorhandler',
+5 verbose install     'compression',
+5 verbose install     'lodash',
+5 verbose install     'jade',
+5 verbose install     'mongoose',
+5 verbose install     'composable-middleware',
+5 verbose install     'connect-mongo',
+5 verbose install     'grunt',
+5 verbose install     'grunt-autoprefixer',
+5 verbose install     'grunt-wiredep',
+5 verbose install     'grunt-concurrent',
+5 verbose install     'grunt-contrib-clean',
+5 verbose install     'grunt-contrib-concat',
+5 verbose install     'grunt-contrib-copy',
+5 verbose install     'grunt-contrib-cssmin',
+5 verbose install     'grunt-contrib-htmlmin',
+5 verbose install     'grunt-contrib-imagemin',
+5 verbose install     'grunt-contrib-jshint',
+5 verbose install     'grunt-contrib-uglify',
+5 verbose install     'grunt-contrib-watch',
+5 verbose install     'grunt-contrib-jade',
+5 verbose install     'grunt-contrib-less',
+5 verbose install     'grunt-google-cdn',
+5 verbose install     'grunt-newer',
+5 verbose install     'grunt-ng-annotate',
+5 verbose install     'grunt-rev',
+5 verbose install     'grunt-svgmin',
+5 verbose install     'grunt-usemin',
+5 verbose install     'grunt-env',
+5 verbose install     'grunt-node-inspector',
+5 verbose install     'grunt-nodemon',
+5 verbose install     'grunt-angular-templates',
+5 verbose install     'grunt-dom-munger',
+5 verbose install     'grunt-protractor-runner',
+5 verbose install     'grunt-asset-injector',
+5 verbose install     'grunt-karma',
+5 verbose install     'grunt-build-control',
+5 verbose install     'grunt-mocha-test',
+5 verbose install     'jit-grunt',
+5 verbose install     'time-grunt',
+5 verbose install     'grunt-express-server',
+5 verbose install     'grunt-open',
+5 verbose install     'open',
+5 verbose install     'jshint-stylish',
+5 verbose install     'connect-livereload',
+5 verbose install     'karma-ng-scenario',
+5 verbose install     'karma-firefox-launcher',
+5 verbose install     'karma-script-launcher',
+5 verbose install     'karma-html2js-preprocessor',
+5 verbose install     'karma-ng-jade2js-preprocessor',
+5 verbose install     'karma-jasmine',
+5 verbose install     'karma-chrome-launcher',
+5 verbose install     'requirejs',
+5 verbose install     'karma-requirejs',
+5 verbose install     'karma-coffee-preprocessor',
+5 verbose install     'karma-jade-preprocessor',
+5 verbose install     'karma-phantomjs-launcher',
+5 verbose install     'karma',
+5 verbose install     'karma-ng-html2js-preprocessor',
+5 verbose install     'supertest',
+5 verbose install     'should' ] ]
+6 info preinstall leave-tracker-app@0.0.0
+7 verbose readDependencies using package.json deps
+8 verbose already installed skipping body-parser@~1.5.0 /home/shikhaj/Leave-Tracker-App
+9 verbose already installed skipping morgan@~1.0.0 /home/shikhaj/Leave-Tracker-App
+10 verbose already installed skipping method-override@~1.0.0 /home/shikhaj/Leave-Tracker-App
+11 verbose already installed skipping serve-favicon@~2.0.1 /home/shikhaj/Leave-Tracker-App
+12 verbose already installed skipping cookie-parser@~1.0.1 /home/shikhaj/Leave-Tracker-App
+13 verbose already installed skipping express-session@~1.0.2 /home/shikhaj/Leave-Tracker-App
+14 verbose already installed skipping errorhandler@~1.0.0 /home/shikhaj/Leave-Tracker-App
+15 verbose already installed skipping compression@~1.0.1 /home/shikhaj/Leave-Tracker-App
+16 verbose already installed skipping lodash@~2.4.1 /home/shikhaj/Leave-Tracker-App
+17 verbose already installed skipping jade@~1.2.0 /home/shikhaj/Leave-Tracker-App
+18 verbose cache add [ 'mongoose@~3.8.8', null ]
+19 verbose cache add name=undefined spec="mongoose@~3.8.8" args=["mongoose@~3.8.8",null]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: 'mongoose@~3.8.8',
+20 verbose parsed url   path: 'mongoose@~3.8.8',
+20 verbose parsed url   href: 'mongoose@~3.8.8' }
+21 verbose cache add name="mongoose" spec="~3.8.8" args=["mongoose","~3.8.8"]
+22 verbose parsed url { protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: '~3.8.8',
+22 verbose parsed url   path: '~3.8.8',
+22 verbose parsed url   href: '~3.8.8' }
+23 verbose addNamed [ 'mongoose', '~3.8.8' ]
+24 verbose addNamed [ null, '>=3.8.8-0 <3.9.0-0' ]
+25 verbose already installed skipping composable-middleware@^0.3.0 /home/shikhaj/Leave-Tracker-App
+26 silly lockFile a99f28d1-mongoose-3-8-8 mongoose@~3.8.8
+27 verbose lock mongoose@~3.8.8 /home/shikhaj/.npm/a99f28d1-mongoose-3-8-8.lock
+28 verbose already installed skipping connect-mongo@^0.4.1 /home/shikhaj/Leave-Tracker-App
+29 verbose already installed skipping grunt@~0.4.4 /home/shikhaj/Leave-Tracker-App
+30 verbose already installed skipping grunt-autoprefixer@~0.7.2 /home/shikhaj/Leave-Tracker-App
+31 verbose already installed skipping grunt-wiredep@~1.8.0 /home/shikhaj/Leave-Tracker-App
+32 verbose already installed skipping grunt-concurrent@~0.5.0 /home/shikhaj/Leave-Tracker-App
+33 verbose already installed skipping grunt-contrib-clean@~0.5.0 /home/shikhaj/Leave-Tracker-App
+34 verbose already installed skipping grunt-contrib-concat@~0.4.0 /home/shikhaj/Leave-Tracker-App
+35 verbose already installed skipping grunt-contrib-copy@~0.5.0 /home/shikhaj/Leave-Tracker-App
+36 verbose already installed skipping grunt-contrib-cssmin@~0.9.0 /home/shikhaj/Leave-Tracker-App
+37 silly addNameRange { name: 'mongoose', range: '>=3.8.8-0 <3.9.0-0', hasData: false }
+38 verbose already installed skipping grunt-contrib-htmlmin@~0.2.0 /home/shikhaj/Leave-Tracker-App
+39 verbose already installed skipping grunt-contrib-imagemin@~0.7.1 /home/shikhaj/Leave-Tracker-App
+40 verbose already installed skipping grunt-contrib-jshint@~0.10.0 /home/shikhaj/Leave-Tracker-App
+41 verbose already installed skipping grunt-contrib-uglify@~0.4.0 /home/shikhaj/Leave-Tracker-App
+42 verbose already installed skipping grunt-contrib-watch@~0.6.1 /home/shikhaj/Leave-Tracker-App
+43 verbose already installed skipping grunt-contrib-jade@^0.11.0 /home/shikhaj/Leave-Tracker-App
+44 verbose already installed skipping grunt-contrib-less@^0.11.0 /home/shikhaj/Leave-Tracker-App
+45 verbose already installed skipping grunt-google-cdn@~0.4.0 /home/shikhaj/Leave-Tracker-App
+46 verbose already installed skipping grunt-newer@~0.7.0 /home/shikhaj/Leave-Tracker-App
+47 verbose already installed skipping grunt-ng-annotate@^0.2.3 /home/shikhaj/Leave-Tracker-App
+48 verbose already installed skipping grunt-rev@~0.1.0 /home/shikhaj/Leave-Tracker-App
+49 verbose already installed skipping grunt-svgmin@~0.4.0 /home/shikhaj/Leave-Tracker-App
+50 verbose already installed skipping grunt-usemin@~2.1.1 /home/shikhaj/Leave-Tracker-App
+51 verbose already installed skipping grunt-env@~0.4.1 /home/shikhaj/Leave-Tracker-App
+52 verbose already installed skipping grunt-node-inspector@~0.1.5 /home/shikhaj/Leave-Tracker-App
+53 verbose already installed skipping grunt-nodemon@~0.2.0 /home/shikhaj/Leave-Tracker-App
+54 verbose already installed skipping grunt-angular-templates@^0.5.4 /home/shikhaj/Leave-Tracker-App
+55 verbose already installed skipping grunt-dom-munger@^3.4.0 /home/shikhaj/Leave-Tracker-App
+56 verbose already installed skipping grunt-protractor-runner@^1.1.0 /home/shikhaj/Leave-Tracker-App
+57 verbose already installed skipping grunt-asset-injector@^0.1.0 /home/shikhaj/Leave-Tracker-App
+58 verbose already installed skipping grunt-karma@~0.8.2 /home/shikhaj/Leave-Tracker-App
+59 verbose cache add [ 'grunt-build-control@DaftMonk/grunt-build-control', null ]
+60 verbose cache add name=undefined spec="grunt-build-control@DaftMonk/grunt-build-control" args=["grunt-build-control@DaftMonk/grunt-build-control",null]
+61 verbose parsed url { protocol: null,
+61 verbose parsed url   slashes: null,
+61 verbose parsed url   auth: null,
+61 verbose parsed url   host: null,
+61 verbose parsed url   port: null,
+61 verbose parsed url   hostname: null,
+61 verbose parsed url   hash: null,
+61 verbose parsed url   search: null,
+61 verbose parsed url   query: null,
+61 verbose parsed url   pathname: 'grunt-build-control@DaftMonk/grunt-build-control',
+61 verbose parsed url   path: 'grunt-build-control@DaftMonk/grunt-build-control',
+61 verbose parsed url   href: 'grunt-build-control@DaftMonk/grunt-build-control' }
+62 verbose cache add name="grunt-build-control" spec="DaftMonk/grunt-build-control" args=["grunt-build-control","DaftMonk/grunt-build-control"]
+63 verbose parsed url { protocol: null,
+63 verbose parsed url   slashes: null,
+63 verbose parsed url   auth: null,
+63 verbose parsed url   host: null,
+63 verbose parsed url   port: null,
+63 verbose parsed url   hostname: null,
+63 verbose parsed url   hash: null,
+63 verbose parsed url   search: null,
+63 verbose parsed url   query: null,
+63 verbose parsed url   pathname: 'DaftMonk/grunt-build-control',
+63 verbose parsed url   path: 'DaftMonk/grunt-build-control',
+63 verbose parsed url   href: 'DaftMonk/grunt-build-control' }
+64 verbose addNamed [ 'grunt-build-control', 'DaftMonk/grunt-build-control' ]
+65 verbose addNamed [ null, null ]
+66 silly lockFile 8453f10e-rol-DaftMonk-grunt-build-control grunt-build-control@DaftMonk/grunt-build-control
+67 verbose lock grunt-build-control@DaftMonk/grunt-build-control /home/shikhaj/.npm/8453f10e-rol-DaftMonk-grunt-build-control.lock
+68 verbose already installed skipping grunt-mocha-test@~0.10.2 /home/shikhaj/Leave-Tracker-App
+69 info addNameTag [ 'grunt-build-control', 'DaftMonk/grunt-build-control' ]
+70 verbose already installed skipping jit-grunt@^0.5.0 /home/shikhaj/Leave-Tracker-App
+71 verbose already installed skipping time-grunt@~0.3.1 /home/shikhaj/Leave-Tracker-App
+72 verbose already installed skipping grunt-express-server@~0.4.17 /home/shikhaj/Leave-Tracker-App
+73 verbose already installed skipping grunt-open@~0.2.3 /home/shikhaj/Leave-Tracker-App
+74 verbose already installed skipping open@~0.0.4 /home/shikhaj/Leave-Tracker-App
+75 verbose already installed skipping jshint-stylish@~0.1.5 /home/shikhaj/Leave-Tracker-App
+76 verbose already installed skipping connect-livereload@~0.4.0 /home/shikhaj/Leave-Tracker-App
+77 verbose already installed skipping karma-ng-scenario@~0.1.0 /home/shikhaj/Leave-Tracker-App
+78 verbose already installed skipping karma-firefox-launcher@~0.1.3 /home/shikhaj/Leave-Tracker-App
+79 verbose already installed skipping karma-script-launcher@~0.1.0 /home/shikhaj/Leave-Tracker-App
+80 verbose already installed skipping karma-html2js-preprocessor@~0.1.0 /home/shikhaj/Leave-Tracker-App
+81 verbose already installed skipping karma-ng-jade2js-preprocessor@^0.1.2 /home/shikhaj/Leave-Tracker-App
+82 verbose already installed skipping karma-jasmine@~0.1.5 /home/shikhaj/Leave-Tracker-App
+83 verbose already installed skipping karma-chrome-launcher@~0.1.3 /home/shikhaj/Leave-Tracker-App
+84 verbose already installed skipping requirejs@~2.1.11 /home/shikhaj/Leave-Tracker-App
+85 verbose already installed skipping karma-requirejs@~0.2.1 /home/shikhaj/Leave-Tracker-App
+86 verbose already installed skipping karma-coffee-preprocessor@~0.2.1 /home/shikhaj/Leave-Tracker-App
+87 verbose already installed skipping karma-jade-preprocessor@0.0.11 /home/shikhaj/Leave-Tracker-App
+88 verbose already installed skipping karma-phantomjs-launcher@~0.1.4 /home/shikhaj/Leave-Tracker-App
+89 verbose already installed skipping karma@~0.12.9 /home/shikhaj/Leave-Tracker-App
+90 verbose already installed skipping karma-ng-html2js-preprocessor@~0.1.0 /home/shikhaj/Leave-Tracker-App
+91 verbose already installed skipping supertest@~0.11.0 /home/shikhaj/Leave-Tracker-App
+92 verbose already installed skipping express@~4.0.0 /home/shikhaj/Leave-Tracker-App
+93 verbose already installed skipping should@~3.3.1 /home/shikhaj/Leave-Tracker-App
+94 verbose url raw grunt-build-control
+95 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-build-control' ]
+96 verbose url resolved https://registry.npmjs.org/grunt-build-control
+97 info trying registry request attempt 1 at 13:53:25
+98 verbose etag "7B3YY54622975RBC1DDY7CURD"
+99 http GET https://registry.npmjs.org/grunt-build-control
+100 verbose url raw mongoose
+101 verbose url resolving [ 'https://registry.npmjs.org/', './mongoose' ]
+102 verbose url resolved https://registry.npmjs.org/mongoose
+103 info trying registry request attempt 1 at 13:53:25
+104 verbose etag "ACPGGW2XA17GAHHFZVRVK6229"
+105 http GET https://registry.npmjs.org/mongoose
+106 http 304 https://registry.npmjs.org/grunt-build-control
+107 silly registry.get cb [ 304,
+107 silly registry.get   { date: 'Tue, 09 Jun 2015 08:23:16 GMT',
+107 silly registry.get     via: '1.1 varnish',
+107 silly registry.get     'cache-control': 'max-age=60',
+107 silly registry.get     etag: '"7B3YY54622975RBC1DDY7CURD"',
+107 silly registry.get     age: '20',
+107 silly registry.get     connection: 'keep-alive',
+107 silly registry.get     'x-served-by': 'cache-sin6921-SIN',
+107 silly registry.get     'x-cache': 'HIT',
+107 silly registry.get     'x-cache-hits': '1',
+107 silly registry.get     'x-timer': 'S1433838196.613381,VS0,VE0',
+107 silly registry.get     vary: 'Accept' } ]
+108 verbose etag grunt-build-control from cache
+109 info maybeGithub Attempting DaftMonk/grunt-build-control from git://github.com/DaftMonk/grunt-build-control
+110 silly lockFile d3d153b4-com-DaftMonk-grunt-build-control git://github.com/DaftMonk/grunt-build-control
+111 verbose lock git://github.com/DaftMonk/grunt-build-control /home/shikhaj/.npm/d3d153b4-com-DaftMonk-grunt-build-control.lock
+112 verbose addRemoteGit [ 'git://github.com/DaftMonk/grunt-build-control', 'master' ]
+113 verbose git remote.origin.url git://github.com/DaftMonk/grunt-build-control
+114 http 200 https://registry.npmjs.org/mongoose
+115 silly registry.get cb [ 200,
+115 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+115 silly registry.get     etag: '"44F2TMFS7UICQWNWGJAFZ92OA"',
+115 silly registry.get     'content-type': 'application/json',
+115 silly registry.get     'cache-control': 'max-age=60',
+115 silly registry.get     'content-length': '326840',
+115 silly registry.get     'accept-ranges': 'bytes',
+115 silly registry.get     date: 'Tue, 09 Jun 2015 08:23:16 GMT',
+115 silly registry.get     via: '1.1 varnish',
+115 silly registry.get     age: '19',
+115 silly registry.get     connection: 'keep-alive',
+115 silly registry.get     'x-served-by': 'cache-sin6920-SIN',
+115 silly registry.get     'x-cache': 'HIT',
+115 silly registry.get     'x-cache-hits': '2',
+115 silly registry.get     'x-timer': 'S1433838196.695238,VS0,VE0',
+115 silly registry.get     vary: 'Accept' } ]
+116 silly addNameRange number 2 { name: 'mongoose', range: '>=3.8.8-0 <3.9.0-0', hasData: true }
+117 silly addNameRange versions [ 'mongoose',
+117 silly addNameRange   [ '0.0.1',
+117 silly addNameRange     '0.0.2',
+117 silly addNameRange     '0.0.3',
+117 silly addNameRange     '0.0.4',
+117 silly addNameRange     '0.0.5',
+117 silly addNameRange     '1.0.0',
+117 silly addNameRange     '1.0.1',
+117 silly addNameRange     '1.0.2',
+117 silly addNameRange     '0.0.6',
+117 silly addNameRange     '1.0.3',
+117 silly addNameRange     '1.0.4',
+117 silly addNameRange     '1.0.5',
+117 silly addNameRange     '1.0.6',
+117 silly addNameRange     '1.0.7',
+117 silly addNameRange     '1.0.8',
+117 silly addNameRange     '1.0.10',
+117 silly addNameRange     '1.0.11',
+117 silly addNameRange     '1.0.12',
+117 silly addNameRange     '1.0.13',
+117 silly addNameRange     '1.0.14',
+117 silly addNameRange     '1.0.15',
+117 silly addNameRange     '1.0.16',
+117 silly addNameRange     '1.1.0',
+117 silly addNameRange     '1.1.1',
+117 silly addNameRange     '1.1.2',
+117 silly addNameRange     '1.1.3',
+117 silly addNameRange     '1.1.4',
+117 silly addNameRange     '1.1.5',
+117 silly addNameRange     '1.1.6',
+117 silly addNameRange     '1.1.7',
+117 silly addNameRange     '1.1.8',
+117 silly addNameRange     '1.1.9',
+117 silly addNameRange     '1.1.10',
+117 silly addNameRange     '1.1.11',
+117 silly addNameRange     '1.1.12',
+117 silly addNameRange     '1.1.13',
+117 silly addNameRange     '1.1.14',
+117 silly addNameRange     '1.1.15',
+117 silly addNameRange     '1.1.16',
+117 silly addNameRange     '1.1.17',
+117 silly addNameRange     '1.1.18',
+117 silly addNameRange     '1.1.19',
+117 silly addNameRange     '1.1.20',
+117 silly addNameRange     '1.1.21',
+117 silly addNameRange     '1.1.22',
+117 silly addNameRange     '1.1.23',
+117 silly addNameRange     '1.1.24',
+117 silly addNameRange     '1.1.25',
+117 silly addNameRange     '1.2.0',
+117 silly addNameRange     '1.3.0',
+117 silly addNameRange     '1.3.1',
+117 silly addNameRange     '1.3.2',
+117 silly addNameRange     '1.3.3',
+117 silly addNameRange     '1.3.4',
+117 silly addNameRange     '1.3.5',
+117 silly addNameRange     '1.3.6',
+117 silly addNameRange     '1.3.7',
+117 silly addNameRange     '1.4.0',
+117 silly addNameRange     '1.5.0',
+117 silly addNameRange     '1.6.0',
+117 silly addNameRange     '1.7.2',
+117 silly addNameRange     '1.7.3',
+117 silly addNameRange     '1.7.4',
+117 silly addNameRange     '1.8.0',
+117 silly addNameRange     '1.8.1',
+117 silly addNameRange     '1.8.2',
+117 silly addNameRange     '1.8.3',
+117 silly addNameRange     '1.8.4',
+117 silly addNameRange     '2.0.0',
+117 silly addNameRange     '2.0.1',
+117 silly addNameRange     '2.0.2',
+117 silly addNameRange     '2.0.3',
+117 silly addNameRange     '2.0.4',
+117 silly addNameRange     '2.1.0',
+117 silly addNameRange     '2.1.1',
+117 silly addNameRange     '2.1.2',
+117 silly addNameRange     '2.1.3',
+117 silly addNameRange     '2.1.4',
+117 silly addNameRange     '2.2.0',
+117 silly addNameRange     '2.2.1',
+117 silly addNameRange     '2.2.2',
+117 silly addNameRange     '2.2.3',
+117 silly addNameRange     '2.2.4',
+117 silly addNameRange     '2.3.0',
+117 silly addNameRange     '2.3.1',
+117 silly addNameRange     '2.3.2',
+117 silly addNameRange     '2.3.3',
+117 silly addNameRange     '2.3.4',
+117 silly addNameRange     '2.3.5',
+117 silly addNameRange     '2.3.6',
+117 silly addNameRange     '2.3.7',
+117 silly addNameRange     '2.3.8',
+117 silly addNameRange     '2.3.9',
+117 silly addNameRange     '2.3.10',
+117 silly addNameRange     '2.3.11',
+117 silly addNameRange     '2.3.12',
+117 silly addNameRange     '2.3.13',
+117 silly addNameRange     '2.4.0',
+117 silly addNameRange     '2.4.1',
+117 silly addNameRange     '2.4.2',
+117 silly addNameRange     '2.4.3',
+117 silly addNameRange     '2.4.4',
+117 silly addNameRange     '2.4.5',
+117 silly addNameRange     '2.4.6',
+117 silly addNameRange     '2.4.7',
+117 silly addNameRange     '2.4.8',
+117 silly addNameRange     '2.4.9',
+117 silly addNameRange     '2.4.10',
+117 silly addNameRange     '2.5.0',
+117 silly addNameRange     '2.5.1',
+117 silly addNameRange     '2.5.2',
+117 silly addNameRange     '2.5.3',
+117 silly addNameRange     '2.5.4',
+117 silly addNameRange     '2.5.5',
+117 silly addNameRange     '2.5.6',
+117 silly addNameRange     '2.5.7',
+117 silly addNameRange     '2.5.8',
+117 silly addNameRange     '2.5.9',
+117 silly addNameRange     '2.5.10',
+117 silly addNameRange     '2.5.11',
+117 silly addNameRange     '2.5.12',
+117 silly addNameRange     '2.5.13',
+117 silly addNameRange     '2.5.14',
+117 silly addNameRange     '2.6.0',
+117 silly addNameRange     '2.6.1',
+117 silly addNameRange     '2.6.2',
+117 silly addNameRange     '2.6.3',
+117 silly addNameRange     '2.6.4',
+117 silly addNameRange     '2.6.5',
+117 silly addNameRange     '2.6.6',
+117 silly addNameRange     '2.6.7',
+117 silly addNameRange     '2.6.8',
+117 silly addNameRange     '2.7.0',
+117 silly addNameRange     '2.7.1',
+117 silly addNameRange     '2.7.2',
+117 silly addNameRange     '2.7.4',
+117 silly addNameRange     '2.7.3',
+117 silly addNameRange     '3.0.0',
+117 silly addNameRange     '3.0.1',
+117 silly addNameRange     '3.0.2',
+117 silly addNameRange     '2.8.0',
+117 silly addNameRange     '3.0.3',
+117 silly addNameRange     '3.1.0',
+117 silly addNameRange     '2.8.1',
+117 silly addNameRange     '3.1.1',
+117 silly addNameRange     '2.8.2',
+117 silly addNameRange     '2.8.3',
+117 silly addNameRange     '2.9.0',
+117 silly addNameRange     '3.2.0',
+117 silly addNameRange     '2.9.1',
+117 silly addNameRange     '3.2.1',
+117 silly addNameRange     '2.9.2',
+117 silly addNameRange     '3.2.2',
+117 silly addNameRange     '3.3.0',
+117 silly addNameRange     '3.3.1',
+117 silly addNameRange     '2.9.3',
+117 silly addNameRange     '3.4.0',
+117 silly addNameRange     '2.9.4',
+117 silly addNameRange     '2.9.5',
+117 silly addNameRange     '3.5.0',
+117 silly addNameRange     '3.5.1',
+117 silly addNameRange     '3.5.2',
+117 silly addNameRange     '3.5.3',
+117 silly addNameRange     '2.9.6',
+117 silly addNameRange     '2.9.7',
+117 silly addNameRange     '3.5.4',
+117 silly addNameRange     '3.5.5',
+117 silly addNameRange     '2.9.8',
+117 silly addNameRange     '2.9.9',
+117 silly addNameRange     '3.5.6',
+117 silly addNameRange     '3.5.7',
+117 silly addNameRange     '3.5.8',
+117 silly addNameRange     '2.9.10',
+117 silly addNameRange     '3.5.9',
+117 silly addNameRange     '3.6.2',
+117 silly addNameRange     '3.5.10',
+117 silly addNameRange     '3.6.3',
+117 silly addNameRange     '3.5.11',
+117 silly addNameRange     '3.6.4',
+117 silly addNameRange     '3.6.5',
+117 silly addNameRange     '3.6.6',
+117 silly addNameRange     '3.6.7',
+117 silly addNameRange     '3.5.12',
+117 silly addNameRange     '3.6.8',
+117 silly addNameRange     '3.6.9',
+117 silly addNameRange     '3.6.10',
+117 silly addNameRange     '3.5.13',
+117 silly addNameRange     '3.5.14',
+117 silly addNameRange     '3.6.11',
+117 silly addNameRange     '3.6.12',
+117 silly addNameRange     '3.6.13',
+117 silly addNameRange     '3.6.14',
+117 silly addNameRange     '3.6.15',
+117 silly addNameRange     '3.5.15',
+117 silly addNameRange     '3.7.0',
+117 silly addNameRange     '3.6.16',
+117 silly addNameRange     '3.5.16',
+117 silly addNameRange     '3.6.17',
+117 silly addNameRange     '3.7.2',
+117 silly addNameRange     '3.0.0-alpha1',
+117 silly addNameRange     '3.0.0-alpha2',
+117 silly addNameRange     '3.0.0-rc0',
+117 silly addNameRange     '3.6.0-rc0',
+117 silly addNameRange     '3.6.0-rc1',
+117 silly addNameRange     '3.6.18',
+117 silly addNameRange     '3.7.3',
+117 silly addNameRange     '3.6.19',
+117 silly addNameRange     '3.6.20',
+117 silly addNameRange     '3.7.4',
+117 silly addNameRange     '3.8.0',
+117 silly addNameRange     '3.8.1',
+117 silly addNameRange     '3.8.2',
+117 silly addNameRange     '3.8.3',
+117 silly addNameRange     '3.8.4',
+117 silly addNameRange     '3.8.5',
+117 silly addNameRange     '3.8.6',
+117 silly addNameRange     '3.8.7',
+117 silly addNameRange     '3.8.8',
+117 silly addNameRange     '3.8.9',
+117 silly addNameRange     '3.8.10',
+117 silly addNameRange     '3.8.11',
+117 silly addNameRange     '3.9.0',
+117 silly addNameRange     '3.8.12',
+117 silly addNameRange     '3.8.13',
+117 silly addNameRange     '3.8.14',
+117 silly addNameRange     '3.8.15',
+117 silly addNameRange     '3.9.1',
+117 silly addNameRange     '3.8.16',
+117 silly addNameRange     '3.9.2',
+117 silly addNameRange     '3.8.17',
+117 silly addNameRange     '3.9.3',
+117 silly addNameRange     '3.8.18',
+117 silly addNameRange     '3.9.4',
+117 silly addNameRange     '3.8.19',
+117 silly addNameRange     '3.9.5',
+117 silly addNameRange     '3.8.20',
+117 silly addNameRange     '3.9.6',
+117 silly addNameRange     '3.8.21',
+117 silly addNameRange     '3.9.7',
+117 silly addNameRange     '3.8.22',
+117 silly addNameRange     '4.0.0-rc0',
+117 silly addNameRange     '4.0.0-rc1',
+117 silly addNameRange     '3.8.23',
+117 silly addNameRange     '4.0.0-rc2',
+117 silly addNameRange     '3.8.24',
+117 silly addNameRange     '4.0.0-rc3',
+117 silly addNameRange     '3.8.25',
+117 silly addNameRange     '4.0.0-rc4',
+117 silly addNameRange     '4.0.0',
+117 silly addNameRange     '4.0.1',
+117 silly addNameRange     '3.8.26',
+117 silly addNameRange     '3.8.27',
+117 silly addNameRange     '4.0.2',
+117 silly addNameRange     '3.8.28',
+117 silly addNameRange     '4.0.3',
+117 silly addNameRange     '3.8.29',
+117 silly addNameRange     '4.0.4',
+117 silly addNameRange     '3.8.30',
+117 silly addNameRange     '4.0.5' ] ]
+118 verbose addNamed [ 'mongoose', '3.8.30' ]
+119 verbose addNamed [ '3.8.30', '3.8.30' ]
+120 silly lockFile 401a67e3-mongoose-3-8-30 mongoose@3.8.30
+121 verbose lock mongoose@3.8.30 /home/shikhaj/.npm/401a67e3-mongoose-3-8-30.lock
+122 silly lockFile c8520ef4-org-mongoose-mongoose-3-8-30-tgz https://registry.npmjs.org/mongoose/-/mongoose-3.8.30.tgz
+123 verbose lock https://registry.npmjs.org/mongoose/-/mongoose-3.8.30.tgz /home/shikhaj/.npm/c8520ef4-org-mongoose-mongoose-3-8-30-tgz.lock
+124 verbose addRemoteTarball [ 'https://registry.npmjs.org/mongoose/-/mongoose-3.8.30.tgz',
+124 verbose addRemoteTarball   '1f805d81cffef0000265fa632965afcb90a609a3' ]
+125 info retry fetch attempt 1 at 13:53:26
+126 verbose fetch to= /home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/tmp.tgz
+127 http GET https://registry.npmjs.org/mongoose/-/mongoose-3.8.30.tgz
+128 http 200 https://registry.npmjs.org/mongoose/-/mongoose-3.8.30.tgz
+129 verbose tar unpack /home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/tmp.tgz
+130 silly lockFile dfab221a-6590-0-25706962728872895-package tar:///home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/package
+131 verbose lock tar:///home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/package /home/shikhaj/.npm/dfab221a-6590-0-25706962728872895-package.lock
+132 silly lockFile eaf0a8df-6590-0-25706962728872895-tmp-tgz tar:///home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/tmp.tgz
+133 verbose lock tar:///home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/tmp.tgz /home/shikhaj/.npm/eaf0a8df-6590-0-25706962728872895-tmp-tgz.lock
+134 silly gunzTarPerm modes [ '755', '644' ]
+135 silly gunzTarPerm extractEntry package.json
+136 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+137 silly gunzTarPerm extractEntry .npmignore
+138 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+139 silly gunzTarPerm extractEntry README.md
+140 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+141 silly gunzTarPerm extractEntry website.js
+142 silly gunzTarPerm modified mode [ 'website.js', 436, 420 ]
+143 silly gunzTarPerm extractEntry index.js
+144 silly gunzTarPerm modified mode [ 'index.js', 436, 420 ]
+145 silly gunzTarPerm extractEntry static.js
+146 silly gunzTarPerm modified mode [ 'static.js', 436, 420 ]
+147 silly gunzTarPerm extractEntry bin/mongoose.min.js
+148 silly gunzTarPerm modified mode [ 'bin/mongoose.min.js', 436, 420 ]
+149 silly gunzTarPerm extractEntry contRun.sh
+150 silly gunzTarPerm modified mode [ 'contRun.sh', 509, 493 ]
+151 silly gunzTarPerm extractEntry .travis.yml
+152 silly gunzTarPerm modified mode [ '.travis.yml', 436, 420 ]
+153 silly gunzTarPerm extractEntry lib/aggregate.js
+154 silly gunzTarPerm modified mode [ 'lib/aggregate.js', 436, 420 ]
+155 silly gunzTarPerm extractEntry lib/statemachine.js
+156 silly gunzTarPerm modified mode [ 'lib/statemachine.js', 436, 420 ]
+157 silly gunzTarPerm extractEntry lib/error.js
+158 silly gunzTarPerm modified mode [ 'lib/error.js', 436, 420 ]
+159 silly gunzTarPerm extractEntry lib/index.js
+160 silly gunzTarPerm modified mode [ 'lib/index.js', 436, 420 ]
+161 silly gunzTarPerm extractEntry lib/utils.js
+162 silly gunzTarPerm modified mode [ 'lib/utils.js', 436, 420 ]
+163 silly gunzTarPerm extractEntry lib/model.js
+164 silly gunzTarPerm modified mode [ 'lib/model.js', 436, 420 ]
+165 silly gunzTarPerm extractEntry lib/collection.js
+166 silly gunzTarPerm modified mode [ 'lib/collection.js', 436, 420 ]
+167 silly gunzTarPerm extractEntry lib/query.js
+168 silly gunzTarPerm modified mode [ 'lib/query.js', 436, 420 ]
+169 silly gunzTarPerm extractEntry lib/queryhelpers.js
+170 silly gunzTarPerm modified mode [ 'lib/queryhelpers.js', 436, 420 ]
+171 silly gunzTarPerm extractEntry lib/querystream.js
+172 silly gunzTarPerm modified mode [ 'lib/querystream.js', 436, 420 ]
+173 silly gunzTarPerm extractEntry lib/document.js
+174 silly gunzTarPerm modified mode [ 'lib/document.js', 436, 420 ]
+175 silly gunzTarPerm extractEntry lib/schematype.js
+176 silly gunzTarPerm modified mode [ 'lib/schematype.js', 436, 420 ]
+177 silly gunzTarPerm extractEntry lib/connectionstate.js
+178 silly gunzTarPerm modified mode [ 'lib/connectionstate.js', 436, 420 ]
+179 silly gunzTarPerm extractEntry lib/schema.js
+180 silly gunzTarPerm modified mode [ 'lib/schema.js', 436, 420 ]
+181 silly gunzTarPerm extractEntry lib/connection.js
+182 silly gunzTarPerm modified mode [ 'lib/connection.js', 436, 420 ]
+183 silly gunzTarPerm extractEntry lib/schemadefault.js
+184 silly gunzTarPerm modified mode [ 'lib/schemadefault.js', 436, 420 ]
+185 silly gunzTarPerm extractEntry lib/internal.js
+186 silly gunzTarPerm modified mode [ 'lib/internal.js', 436, 420 ]
+187 silly gunzTarPerm extractEntry lib/virtualtype.js
+188 silly gunzTarPerm modified mode [ 'lib/virtualtype.js', 436, 420 ]
+189 silly gunzTarPerm extractEntry lib/promise.js
+190 silly gunzTarPerm modified mode [ 'lib/promise.js', 436, 420 ]
+191 silly gunzTarPerm extractEntry lib/schema/array.js
+192 silly gunzTarPerm modified mode [ 'lib/schema/array.js', 436, 420 ]
+193 silly gunzTarPerm extractEntry lib/schema/boolean.js
+194 silly gunzTarPerm modified mode [ 'lib/schema/boolean.js', 436, 420 ]
+195 silly gunzTarPerm extractEntry lib/schema/buffer.js
+196 silly gunzTarPerm modified mode [ 'lib/schema/buffer.js', 436, 420 ]
+197 silly gunzTarPerm extractEntry lib/schema/date.js
+198 silly gunzTarPerm modified mode [ 'lib/schema/date.js', 436, 420 ]
+199 silly gunzTarPerm extractEntry lib/schema/documentarray.js
+200 silly gunzTarPerm modified mode [ 'lib/schema/documentarray.js', 436, 420 ]
+201 silly gunzTarPerm extractEntry lib/schema/index.js
+202 silly gunzTarPerm modified mode [ 'lib/schema/index.js', 436, 420 ]
+203 silly gunzTarPerm extractEntry lib/schema/mixed.js
+204 silly gunzTarPerm modified mode [ 'lib/schema/mixed.js', 436, 420 ]
+205 silly gunzTarPerm extractEntry lib/schema/number.js
+206 silly gunzTarPerm modified mode [ 'lib/schema/number.js', 436, 420 ]
+207 silly gunzTarPerm extractEntry lib/schema/objectid.js
+208 silly gunzTarPerm modified mode [ 'lib/schema/objectid.js', 436, 420 ]
+209 silly gunzTarPerm extractEntry lib/schema/string.js
+210 silly gunzTarPerm modified mode [ 'lib/schema/string.js', 436, 420 ]
+211 silly gunzTarPerm extractEntry lib/error/cast.js
+212 silly gunzTarPerm modified mode [ 'lib/error/cast.js', 436, 420 ]
+213 silly gunzTarPerm extractEntry lib/error/divergentArray.js
+214 silly gunzTarPerm modified mode [ 'lib/error/divergentArray.js', 436, 420 ]
+215 silly gunzTarPerm extractEntry lib/error/messages.js
+216 silly gunzTarPerm modified mode [ 'lib/error/messages.js', 436, 420 ]
+217 silly gunzTarPerm extractEntry lib/error/missingSchema.js
+218 silly gunzTarPerm modified mode [ 'lib/error/missingSchema.js', 436, 420 ]
+219 silly gunzTarPerm extractEntry lib/error/overwriteModel.js
+220 silly gunzTarPerm modified mode [ 'lib/error/overwriteModel.js', 436, 420 ]
+221 silly gunzTarPerm extractEntry lib/error/validation.js
+222 silly gunzTarPerm modified mode [ 'lib/error/validation.js', 436, 420 ]
+223 silly gunzTarPerm extractEntry lib/error/validator.js
+224 silly gunzTarPerm modified mode [ 'lib/error/validator.js', 436, 420 ]
+225 silly gunzTarPerm extractEntry lib/error/version.js
+226 silly gunzTarPerm modified mode [ 'lib/error/version.js', 436, 420 ]
+227 silly gunzTarPerm extractEntry lib/types/array.js
+228 silly gunzTarPerm modified mode [ 'lib/types/array.js', 436, 420 ]
+229 silly gunzTarPerm extractEntry lib/types/buffer.js
+230 silly gunzTarPerm modified mode [ 'lib/types/buffer.js', 436, 420 ]
+231 silly gunzTarPerm extractEntry lib/types/documentarray.js
+232 silly gunzTarPerm modified mode [ 'lib/types/documentarray.js', 436, 420 ]
+233 silly gunzTarPerm extractEntry lib/types/embedded.js
+234 silly gunzTarPerm modified mode [ 'lib/types/embedded.js', 436, 420 ]
+235 silly gunzTarPerm extractEntry lib/types/index.js
+236 silly gunzTarPerm modified mode [ 'lib/types/index.js', 436, 420 ]
+237 silly gunzTarPerm extractEntry lib/types/objectid.js
+238 silly gunzTarPerm modified mode [ 'lib/types/objectid.js', 436, 420 ]
+239 silly gunzTarPerm extractEntry lib/drivers/SPEC.md
+240 silly gunzTarPerm modified mode [ 'lib/drivers/SPEC.md', 436, 420 ]
+241 silly gunzTarPerm extractEntry lib/drivers/node-mongodb-native/binary.js
+242 silly gunzTarPerm modified mode [ 'lib/drivers/node-mongodb-native/binary.js', 436, 420 ]
+243 silly gunzTarPerm extractEntry lib/drivers/node-mongodb-native/collection.js
+244 silly gunzTarPerm modified mode [ 'lib/drivers/node-mongodb-native/collection.js', 436, 420 ]
+245 silly gunzTarPerm extractEntry lib/drivers/node-mongodb-native/connection.js
+246 silly gunzTarPerm modified mode [ 'lib/drivers/node-mongodb-native/connection.js', 436, 420 ]
+247 silly gunzTarPerm extractEntry lib/drivers/node-mongodb-native/objectid.js
+248 silly gunzTarPerm modified mode [ 'lib/drivers/node-mongodb-native/objectid.js', 436, 420 ]
+249 silly gunzTarPerm extractEntry CONTRIBUTING.md
+250 silly gunzTarPerm modified mode [ 'CONTRIBUTING.md', 436, 420 ]
+251 silly gunzTarPerm extractEntry release-items.md
+252 silly gunzTarPerm modified mode [ 'release-items.md', 436, 420 ]
+253 silly gunzTarPerm extractEntry History.md
+254 silly gunzTarPerm modified mode [ 'History.md', 436, 420 ]
+255 silly gunzTarPerm extractEntry examples/README.md
+256 silly gunzTarPerm modified mode [ 'examples/README.md', 436, 420 ]
+257 silly gunzTarPerm extractEntry examples/doc-methods.js
+258 silly gunzTarPerm modified mode [ 'examples/doc-methods.js', 436, 420 ]
+259 silly gunzTarPerm extractEntry examples/statics/person.js
+260 silly gunzTarPerm modified mode [ 'examples/statics/person.js', 436, 420 ]
+261 silly gunzTarPerm extractEntry examples/statics/statics.js
+262 silly gunzTarPerm modified mode [ 'examples/statics/statics.js', 436, 420 ]
+263 silly gunzTarPerm extractEntry examples/express/README.md
+264 silly gunzTarPerm modified mode [ 'examples/express/README.md', 436, 420 ]
+265 silly gunzTarPerm extractEntry examples/express/connection-sharing/package.json
+266 silly gunzTarPerm modified mode [ 'examples/express/connection-sharing/package.json', 436, 420 ]
+267 silly gunzTarPerm extractEntry examples/express/connection-sharing/README.md
+268 silly gunzTarPerm modified mode [ 'examples/express/connection-sharing/README.md', 436, 420 ]
+269 silly gunzTarPerm extractEntry examples/express/connection-sharing/app.js
+270 silly gunzTarPerm modified mode [ 'examples/express/connection-sharing/app.js', 436, 420 ]
+271 silly gunzTarPerm extractEntry examples/express/connection-sharing/modelA.js
+272 silly gunzTarPerm modified mode [ 'examples/express/connection-sharing/modelA.js', 436, 420 ]
+273 silly gunzTarPerm extractEntry examples/express/connection-sharing/routes.js
+274 silly gunzTarPerm modified mode [ 'examples/express/connection-sharing/routes.js', 436, 420 ]
+275 silly gunzTarPerm extractEntry examples/geospatial/package.json
+276 silly gunzTarPerm modified mode [ 'examples/geospatial/package.json', 436, 420 ]
+277 silly gunzTarPerm extractEntry examples/geospatial/geoJSONSchema.js
+278 silly gunzTarPerm modified mode [ 'examples/geospatial/geoJSONSchema.js', 436, 420 ]
+279 silly gunzTarPerm extractEntry examples/geospatial/geoJSONexample.js
+280 silly gunzTarPerm modified mode [ 'examples/geospatial/geoJSONexample.js', 436, 420 ]
+281 silly gunzTarPerm extractEntry examples/geospatial/geospatial.js
+282 silly gunzTarPerm modified mode [ 'examples/geospatial/geospatial.js', 436, 420 ]
+283 silly gunzTarPerm extractEntry examples/geospatial/person.js
+284 silly gunzTarPerm modified mode [ 'examples/geospatial/person.js', 436, 420 ]
+285 silly gunzTarPerm extractEntry examples/globalschemas/gs_example.js
+286 silly gunzTarPerm modified mode [ 'examples/globalschemas/gs_example.js', 436, 420 ]
+287 silly gunzTarPerm extractEntry examples/globalschemas/person.js
+288 silly gunzTarPerm modified mode [ 'examples/globalschemas/person.js', 436, 420 ]
+289 silly gunzTarPerm extractEntry examples/lean/package.json
+290 silly gunzTarPerm modified mode [ 'examples/lean/package.json', 436, 420 ]
+291 silly gunzTarPerm extractEntry examples/lean/lean.js
+292 silly gunzTarPerm modified mode [ 'examples/lean/lean.js', 436, 420 ]
+293 silly gunzTarPerm extractEntry examples/lean/person.js
+294 silly gunzTarPerm modified mode [ 'examples/lean/person.js', 436, 420 ]
+295 silly gunzTarPerm extractEntry examples/aggregate/package.json
+296 silly gunzTarPerm modified mode [ 'examples/aggregate/package.json', 436, 420 ]
+297 silly gunzTarPerm extractEntry examples/aggregate/aggregate.js
+298 silly gunzTarPerm modified mode [ 'examples/aggregate/aggregate.js', 436, 420 ]
+299 silly gunzTarPerm extractEntry examples/aggregate/person.js
+300 silly gunzTarPerm modified mode [ 'examples/aggregate/person.js', 436, 420 ]
+301 silly gunzTarPerm extractEntry examples/population/population-across-three-collections.js
+302 silly gunzTarPerm modified mode [ 'examples/population/population-across-three-collections.js',
+302 silly gunzTarPerm   436,
+302 silly gunzTarPerm   420 ]
+303 silly gunzTarPerm extractEntry examples/population/population-basic.js
+304 silly gunzTarPerm modified mode [ 'examples/population/population-basic.js', 436, 420 ]
+305 silly gunzTarPerm extractEntry examples/population/population-of-existing-doc.js
+306 silly gunzTarPerm modified mode [ 'examples/population/population-of-existing-doc.js', 436, 420 ]
+307 silly gunzTarPerm extractEntry examples/population/population-of-multiple-existing-docs.js
+308 silly gunzTarPerm modified mode [ 'examples/population/population-of-multiple-existing-docs.js',
+308 silly gunzTarPerm   436,
+308 silly gunzTarPerm   420 ]
+309 silly gunzTarPerm extractEntry examples/population/population-options.js
+310 silly gunzTarPerm modified mode [ 'examples/population/population-options.js', 436, 420 ]
+311 silly gunzTarPerm extractEntry examples/population/population-plain-objects.js
+312 silly gunzTarPerm modified mode [ 'examples/population/population-plain-objects.js', 436, 420 ]
+313 silly gunzTarPerm extractEntry examples/promises/package.json
+314 silly gunzTarPerm modified mode [ 'examples/promises/package.json', 436, 420 ]
+315 silly gunzTarPerm extractEntry examples/promises/person.js
+316 silly gunzTarPerm modified mode [ 'examples/promises/person.js', 436, 420 ]
+317 silly gunzTarPerm extractEntry examples/promises/promise.js
+318 silly gunzTarPerm modified mode [ 'examples/promises/promise.js', 436, 420 ]
+319 silly gunzTarPerm extractEntry examples/querybuilder/package.json
+320 silly gunzTarPerm modified mode [ 'examples/querybuilder/package.json', 436, 420 ]
+321 silly gunzTarPerm extractEntry examples/querybuilder/person.js
+322 silly gunzTarPerm modified mode [ 'examples/querybuilder/person.js', 436, 420 ]
+323 silly gunzTarPerm extractEntry examples/querybuilder/querybuilder.js
+324 silly gunzTarPerm modified mode [ 'examples/querybuilder/querybuilder.js', 436, 420 ]
+325 silly gunzTarPerm extractEntry examples/replicasets/package.json
+326 silly gunzTarPerm modified mode [ 'examples/replicasets/package.json', 436, 420 ]
+327 silly gunzTarPerm extractEntry examples/replicasets/person.js
+328 silly gunzTarPerm modified mode [ 'examples/replicasets/person.js', 436, 420 ]
+329 silly gunzTarPerm extractEntry examples/replicasets/replica-sets.js
+330 silly gunzTarPerm modified mode [ 'examples/replicasets/replica-sets.js', 436, 420 ]
+331 silly gunzTarPerm extractEntry examples/schema/schema.js
+332 silly gunzTarPerm modified mode [ 'examples/schema/schema.js', 436, 420 ]
+333 silly gunzTarPerm extractEntry examples/schema/storing-schemas-as-json/index.js
+334 silly gunzTarPerm modified mode [ 'examples/schema/storing-schemas-as-json/index.js', 436, 420 ]
+335 silly gunzTarPerm extractEntry examples/schema/storing-schemas-as-json/schema.json
+336 silly gunzTarPerm modified mode [ 'examples/schema/storing-schemas-as-json/schema.json',
+336 silly gunzTarPerm   436,
+336 silly gunzTarPerm   420 ]
+337 silly gunzTarPerm extractEntry examples/mapreduce/package.json
+338 silly gunzTarPerm modified mode [ 'examples/mapreduce/package.json', 436, 420 ]
+339 silly gunzTarPerm extractEntry examples/mapreduce/mapreduce.js
+340 silly gunzTarPerm modified mode [ 'examples/mapreduce/mapreduce.js', 436, 420 ]
+341 silly gunzTarPerm extractEntry examples/mapreduce/person.js
+342 silly gunzTarPerm modified mode [ 'examples/mapreduce/person.js', 436, 420 ]
+343 silly lockFile dfab221a-6590-0-25706962728872895-package tar:///home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/package
+344 silly lockFile dfab221a-6590-0-25706962728872895-package tar:///home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/package
+345 silly lockFile eaf0a8df-6590-0-25706962728872895-tmp-tgz tar:///home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/tmp.tgz
+346 silly lockFile eaf0a8df-6590-0-25706962728872895-tmp-tgz tar:///home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/tmp.tgz
+347 verbose tar pack [ '/home/shikhaj/.npm/mongoose/3.8.30/package.tgz',
+347 verbose tar pack   '/home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/package' ]
+348 verbose tarball /home/shikhaj/.npm/mongoose/3.8.30/package.tgz
+349 verbose folder /home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/package
+350 silly lockFile dfab221a-6590-0-25706962728872895-package tar:///home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/package
+351 verbose lock tar:///home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/package /home/shikhaj/.npm/dfab221a-6590-0-25706962728872895-package.lock
+352 silly lockFile cbd72ba3--npm-mongoose-3-8-30-package-tgz tar:///home/shikhaj/.npm/mongoose/3.8.30/package.tgz
+353 verbose lock tar:///home/shikhaj/.npm/mongoose/3.8.30/package.tgz /home/shikhaj/.npm/cbd72ba3--npm-mongoose-3-8-30-package-tgz.lock
+354 silly lockFile dfab221a-6590-0-25706962728872895-package tar:///home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/package
+355 silly lockFile dfab221a-6590-0-25706962728872895-package tar:///home/shikhaj/tmp/npm-17292-iQNmJp10/1433838206590-0.25706962728872895/package
+356 silly lockFile cbd72ba3--npm-mongoose-3-8-30-package-tgz tar:///home/shikhaj/.npm/mongoose/3.8.30/package.tgz
+357 silly lockFile cbd72ba3--npm-mongoose-3-8-30-package-tgz tar:///home/shikhaj/.npm/mongoose/3.8.30/package.tgz
+358 silly lockFile 2b5e3e5e-khaj-npm-mongoose-3-8-30-package /home/shikhaj/.npm/mongoose/3.8.30/package
+359 verbose lock /home/shikhaj/.npm/mongoose/3.8.30/package /home/shikhaj/.npm/2b5e3e5e-khaj-npm-mongoose-3-8-30-package.lock
+360 silly lockFile 2b5e3e5e-khaj-npm-mongoose-3-8-30-package /home/shikhaj/.npm/mongoose/3.8.30/package
+361 silly lockFile 2b5e3e5e-khaj-npm-mongoose-3-8-30-package /home/shikhaj/.npm/mongoose/3.8.30/package
+362 verbose tar unpack /home/shikhaj/.npm/mongoose/3.8.30/package.tgz
+363 silly lockFile 26a6e391-khaj-npm-mongoose-3-8-30-package tar:///home/shikhaj/.npm/mongoose/3.8.30/package
+364 verbose lock tar:///home/shikhaj/.npm/mongoose/3.8.30/package /home/shikhaj/.npm/26a6e391-khaj-npm-mongoose-3-8-30-package.lock
+365 silly lockFile cbd72ba3--npm-mongoose-3-8-30-package-tgz tar:///home/shikhaj/.npm/mongoose/3.8.30/package.tgz
+366 verbose lock tar:///home/shikhaj/.npm/mongoose/3.8.30/package.tgz /home/shikhaj/.npm/cbd72ba3--npm-mongoose-3-8-30-package-tgz.lock
+367 silly gunzTarPerm modes [ '755', '644' ]
+368 silly gunzTarPerm extractEntry package.json
+369 silly gunzTarPerm extractEntry .npmignore
+370 silly gunzTarPerm extractEntry README.md
+371 silly gunzTarPerm extractEntry static.js
+372 silly gunzTarPerm extractEntry index.js
+373 silly gunzTarPerm extractEntry website.js
+374 silly gunzTarPerm extractEntry contRun.sh
+375 silly gunzTarPerm extractEntry .travis.yml
+376 silly gunzTarPerm extractEntry bin/mongoose.min.js
+377 silly gunzTarPerm extractEntry lib/aggregate.js
+378 silly gunzTarPerm extractEntry lib/statemachine.js
+379 silly gunzTarPerm extractEntry lib/error.js
+380 silly gunzTarPerm extractEntry lib/index.js
+381 silly gunzTarPerm extractEntry lib/utils.js
+382 silly gunzTarPerm extractEntry lib/model.js
+383 silly gunzTarPerm extractEntry lib/collection.js
+384 silly gunzTarPerm extractEntry lib/query.js
+385 silly gunzTarPerm extractEntry lib/queryhelpers.js
+386 silly gunzTarPerm extractEntry lib/querystream.js
+387 silly gunzTarPerm extractEntry lib/document.js
+388 silly gunzTarPerm extractEntry lib/schematype.js
+389 silly gunzTarPerm extractEntry lib/connectionstate.js
+390 silly gunzTarPerm extractEntry lib/schema.js
+391 silly gunzTarPerm extractEntry lib/connection.js
+392 silly gunzTarPerm extractEntry lib/schemadefault.js
+393 silly gunzTarPerm extractEntry lib/internal.js
+394 silly gunzTarPerm extractEntry lib/virtualtype.js
+395 silly gunzTarPerm extractEntry lib/promise.js
+396 silly gunzTarPerm extractEntry lib/schema/array.js
+397 silly gunzTarPerm extractEntry lib/schema/boolean.js
+398 silly gunzTarPerm extractEntry lib/schema/buffer.js
+399 silly gunzTarPerm extractEntry lib/schema/date.js
+400 silly gunzTarPerm extractEntry lib/schema/documentarray.js
+401 silly gunzTarPerm extractEntry lib/schema/index.js
+402 silly gunzTarPerm extractEntry lib/schema/mixed.js
+403 silly gunzTarPerm extractEntry lib/schema/number.js
+404 silly gunzTarPerm extractEntry lib/schema/objectid.js
+405 silly gunzTarPerm extractEntry lib/schema/string.js
+406 silly gunzTarPerm extractEntry lib/error/cast.js
+407 silly gunzTarPerm extractEntry lib/error/divergentArray.js
+408 silly gunzTarPerm extractEntry lib/error/messages.js
+409 silly gunzTarPerm extractEntry lib/error/missingSchema.js
+410 silly gunzTarPerm extractEntry lib/error/overwriteModel.js
+411 silly gunzTarPerm extractEntry lib/error/validation.js
+412 silly gunzTarPerm extractEntry lib/error/validator.js
+413 silly gunzTarPerm extractEntry lib/error/version.js
+414 silly gunzTarPerm extractEntry lib/types/array.js
+415 silly gunzTarPerm extractEntry lib/types/buffer.js
+416 silly gunzTarPerm extractEntry lib/types/documentarray.js
+417 silly gunzTarPerm extractEntry lib/types/embedded.js
+418 silly gunzTarPerm extractEntry lib/types/index.js
+419 silly gunzTarPerm extractEntry lib/types/objectid.js
+420 silly gunzTarPerm extractEntry lib/drivers/SPEC.md
+421 silly gunzTarPerm extractEntry lib/drivers/node-mongodb-native/binary.js
+422 silly gunzTarPerm extractEntry lib/drivers/node-mongodb-native/collection.js
+423 silly gunzTarPerm extractEntry lib/drivers/node-mongodb-native/connection.js
+424 silly gunzTarPerm extractEntry lib/drivers/node-mongodb-native/objectid.js
+425 silly gunzTarPerm extractEntry History.md
+426 silly gunzTarPerm extractEntry release-items.md
+427 silly gunzTarPerm extractEntry CONTRIBUTING.md
+428 silly gunzTarPerm extractEntry examples/README.md
+429 silly gunzTarPerm extractEntry examples/doc-methods.js
+430 silly gunzTarPerm extractEntry examples/statics/person.js
+431 silly gunzTarPerm extractEntry examples/statics/statics.js
+432 silly gunzTarPerm extractEntry examples/express/README.md
+433 silly gunzTarPerm extractEntry examples/express/connection-sharing/package.json
+434 silly gunzTarPerm extractEntry examples/express/connection-sharing/README.md
+435 silly gunzTarPerm extractEntry examples/express/connection-sharing/app.js
+436 silly gunzTarPerm extractEntry examples/express/connection-sharing/modelA.js
+437 silly gunzTarPerm extractEntry examples/express/connection-sharing/routes.js
+438 silly gunzTarPerm extractEntry examples/geospatial/package.json
+439 silly gunzTarPerm extractEntry examples/geospatial/geoJSONSchema.js
+440 silly gunzTarPerm extractEntry examples/geospatial/geoJSONexample.js
+441 silly gunzTarPerm extractEntry examples/geospatial/geospatial.js
+442 silly gunzTarPerm extractEntry examples/geospatial/person.js
+443 silly gunzTarPerm extractEntry examples/globalschemas/gs_example.js
+444 silly gunzTarPerm extractEntry examples/globalschemas/person.js
+445 silly gunzTarPerm extractEntry examples/lean/package.json
+446 silly gunzTarPerm extractEntry examples/lean/lean.js
+447 silly gunzTarPerm extractEntry examples/lean/person.js
+448 silly gunzTarPerm extractEntry examples/aggregate/package.json
+449 silly gunzTarPerm extractEntry examples/aggregate/aggregate.js
+450 silly gunzTarPerm extractEntry examples/aggregate/person.js
+451 silly gunzTarPerm extractEntry examples/population/population-across-three-collections.js
+452 silly gunzTarPerm extractEntry examples/population/population-basic.js
+453 silly gunzTarPerm extractEntry examples/population/population-of-existing-doc.js
+454 silly gunzTarPerm extractEntry examples/population/population-of-multiple-existing-docs.js
+455 silly gunzTarPerm extractEntry examples/population/population-options.js
+456 silly gunzTarPerm extractEntry examples/population/population-plain-objects.js
+457 silly gunzTarPerm extractEntry examples/promises/package.json
+458 silly gunzTarPerm extractEntry examples/promises/person.js
+459 silly gunzTarPerm extractEntry examples/promises/promise.js
+460 silly gunzTarPerm extractEntry examples/querybuilder/package.json
+461 silly gunzTarPerm extractEntry examples/querybuilder/person.js
+462 silly gunzTarPerm extractEntry examples/querybuilder/querybuilder.js
+463 silly gunzTarPerm extractEntry examples/replicasets/package.json
+464 silly gunzTarPerm extractEntry examples/replicasets/person.js
+465 silly gunzTarPerm extractEntry examples/replicasets/replica-sets.js
+466 silly gunzTarPerm extractEntry examples/schema/schema.js
+467 silly gunzTarPerm extractEntry examples/schema/storing-schemas-as-json/index.js
+468 silly gunzTarPerm extractEntry examples/schema/storing-schemas-as-json/schema.json
+469 silly gunzTarPerm extractEntry examples/mapreduce/package.json
+470 silly gunzTarPerm extractEntry examples/mapreduce/mapreduce.js
+471 silly gunzTarPerm extractEntry examples/mapreduce/person.js
+472 silly lockFile 26a6e391-khaj-npm-mongoose-3-8-30-package tar:///home/shikhaj/.npm/mongoose/3.8.30/package
+473 silly lockFile 26a6e391-khaj-npm-mongoose-3-8-30-package tar:///home/shikhaj/.npm/mongoose/3.8.30/package
+474 silly lockFile cbd72ba3--npm-mongoose-3-8-30-package-tgz tar:///home/shikhaj/.npm/mongoose/3.8.30/package.tgz
+475 silly lockFile cbd72ba3--npm-mongoose-3-8-30-package-tgz tar:///home/shikhaj/.npm/mongoose/3.8.30/package.tgz
+476 verbose chmod /home/shikhaj/.npm/mongoose/3.8.30/package.tgz 644
+477 verbose chown /home/shikhaj/.npm/mongoose/3.8.30/package.tgz [ 1000, 1000 ]
+478 silly lockFile c8520ef4-org-mongoose-mongoose-3-8-30-tgz https://registry.npmjs.org/mongoose/-/mongoose-3.8.30.tgz
+479 silly lockFile c8520ef4-org-mongoose-mongoose-3-8-30-tgz https://registry.npmjs.org/mongoose/-/mongoose-3.8.30.tgz
+480 silly lockFile 401a67e3-mongoose-3-8-30 mongoose@3.8.30
+481 silly lockFile 401a67e3-mongoose-3-8-30 mongoose@3.8.30
+482 silly lockFile a99f28d1-mongoose-3-8-8 mongoose@~3.8.8
+483 silly lockFile a99f28d1-mongoose-3-8-8 mongoose@~3.8.8
+484 error git fetch -a origin (git://github.com/DaftMonk/grunt-build-control) error: cannot open FETCH_HEAD: Permission denied
+485 silly lockFile d3d153b4-com-DaftMonk-grunt-build-control git://github.com/DaftMonk/grunt-build-control
+486 silly lockFile d3d153b4-com-DaftMonk-grunt-build-control git://github.com/DaftMonk/grunt-build-control
+487 info maybeGithub Attempting DaftMonk/grunt-build-control from git+ssh://git@github.com:DaftMonk/grunt-build-control
+488 silly lockFile 43a2a1d5-com-DaftMonk-grunt-build-control git+ssh://git@github.com:DaftMonk/grunt-build-control
+489 verbose lock git+ssh://git@github.com:DaftMonk/grunt-build-control /home/shikhaj/.npm/43a2a1d5-com-DaftMonk-grunt-build-control.lock
+490 verbose addRemoteGit [ 'git@github.com:DaftMonk/grunt-build-control', 'master' ]
+491 silly lockFile 8c9ecfcb-com-DaftMonk-grunt-build-control git@github.com:DaftMonk/grunt-build-control
+492 silly lockFile 8453f10e-rol-DaftMonk-grunt-build-control grunt-build-control@DaftMonk/grunt-build-control
+493 silly lockFile 8453f10e-rol-DaftMonk-grunt-build-control grunt-build-control@DaftMonk/grunt-build-control
+494 error Error: No compatible version found: grunt-build-control@'DaftMonk/grunt-build-control'
+494 error Valid install targets:
+494 error ["0.0.1","0.1.0","0.1.1","0.1.2","0.1.3","0.1.4","0.1.5","0.1.6","0.1.7","0.1.8","0.2.0","0.2.1","0.2.2","0.3.0","0.4.0","0.5.0"]
+494 error     at installTargetsError (/usr/share/npm/lib/cache.js:719:10)
+494 error     at /usr/share/npm/lib/cache.js:638:10
+494 error     at saved (/usr/share/npm/node_modules/npm-registry-client/lib/get.js:142:7)
+494 error     at /usr/lib/nodejs/graceful-fs/polyfills.js:133:7
+494 error     at Object.oncomplete (fs.js:107:15)
+495 error If you need help, you may report this log at:
+495 error     <http://github.com/isaacs/npm/issues>
+495 error or email it to:
+495 error     <npm-@googlegroups.com>
+496 error System Linux 3.13.0-52-generic
+497 error command "/usr/bin/nodejs" "/usr/bin/npm" "install"
+498 error cwd /home/shikhaj/Leave-Tracker-App
+499 error node -v v0.10.25
+500 error npm -v 1.3.10
+501 verbose exit [ 1, true ]
