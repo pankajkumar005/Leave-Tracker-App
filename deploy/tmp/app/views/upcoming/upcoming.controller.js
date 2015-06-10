@@ -5,7 +5,7 @@ angular.module('leaveTrackerAppApp')
     $scope.message = 'Hello';
      holidayFactory.getUpcomingDetails().then(function(response) {
         console.log(response);
-        $scope.record = response;
+        $scope.upcomingRecord = response;
     });
 
   });
