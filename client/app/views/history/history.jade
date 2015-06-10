@@ -1,0 +1,21 @@
+.row
+  .tbl_view
+    h2 History Leaves
+    .table-responsive
+      table.table.table-bordered.table-hover.table-striped
+        thead
+          tr
+            th Start Date
+            th End Date
+            th Type
+            th Duration
+            th Reason
+            th Status
+        tbody
+          tr(ng-repeat='x in record')
+            td {{ x.startDate }}
+            td {{ x.endDate }}
+            td {{ x.type }}
+            td {{ x.totalDays }}
+            td {{ x.reason }}
+            td {{ x.status }}

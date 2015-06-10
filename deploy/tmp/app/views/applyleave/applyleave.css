@@ -1,0 +1,30 @@
+.head{
+	text-align: center;
+	margin-top: 7%;
+}
+.col1 {
+	display: inline-block;
+	width: 100%;
+}
+.from-date {
+	margin-right: 35px;
+}
+.floatleft {
+    float: left;
+}
+.type-margin{
+	margin-top: 2%;
+}
+.desc-margin{
+	margin-top: 2%;
+}
+.frmbtn{
+	margin-top: 2%;
+}
+#leaveapply{
+	margin-right: 2%;
+	width: 15%;
+}
+#leavecancel{
+	width: 15%;
+}

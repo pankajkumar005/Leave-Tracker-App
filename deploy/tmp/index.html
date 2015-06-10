@@ -1,0 +1,45 @@
+<!doctype html>
+<html  >
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="app/app.css">
+  </head>
+  <body ng-app="leaveTrackerAppApp">
+    <div id="wrapper"> 
+      <div ng-include='"components/navigation/navigation.html"'></div>
+      <div ui-view=""></div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.16/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.16/angular-route.min.js" ></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular-route.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+   <script src="http://code.highcharts.com/highcharts.js"></script>
+   <script src="http://code.highcharts.com/modules/exporting.js"></script>
+   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="app/app.js"></script>
+   <script src="app/directives/commonDirectives/commonDirectives.directive.js"></script>
+  <script src="app/directives/datePicker/datePicker.directive.js"></script>
+  <script src="app/services/holidaysService/holidaysService.service.js"></script> 
+  <script src="app/views/applyleave/applyleave.controller.js"></script>
+  <script src="app/views/applyleave/applyleave.js"></script>
+  <script src="app/views/history/history.controller.js"></script>
+  <script src="app/views/history/history.js"></script>
+  <script src="app/views/home/home.controller.js"></script>
+  <script src="app/views/home/home.js"></script>
+  <script src="app/views/main/main.controller.js"></script>
+  <script src="app/views/main/main.js"></script>
+  <script src="app/views/upcoming/upcoming.controller.js"></script>
+  <script src="app/views/upcoming/upcoming.js"></script>
+  <script src="components/navbar/navbar.controller.js"></script>
+  <script src="components/navigation/navigation.controller.js"></script>
+  </body>
+</html>

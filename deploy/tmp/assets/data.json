@@ -1,0 +1,152 @@
+{
+  "hol": [
+    "Jan 01, 2014",
+    "Jan 14, 2014",
+    "Mar 17, 2014",
+    "Mar 31, 2014",
+    "Jul 29, 2014",
+    "Aug 15, 2014",
+    "Aug 29, 2014",
+    "Oct 02, 2014",
+    "Oct 03, 2014",
+    "Oct 23, 2014",
+    "Dec 25, 2014",
+    "Jan 15, 2015",
+    "Jan 26, 2015",
+    "Mar 06, 2015",
+    "Apr 03, 2015",
+    "Sep 17, 2015",
+    "Sep 25, 2015",
+    "Oct 02, 2015",
+    "Oct 22, 2015",
+    "Nov 11, 2015",
+    "Dec 25, 2015",
+    "Jan 01, 2015"
+  ],
+  "quarterList": [
+    {
+      "selected": true,
+      "details": {
+        "months": "APR-JUN",
+        "applied": 0,
+        "approved": 0,
+        "carryForword": 0,
+        "availed": 0,
+        "accrued": 3,
+        "balance": 3,
+        "canceled": 0
+      },
+      "value": "APR-JUN",
+      "key": "FIRST"
+    },
+    {
+      "selected": false,
+      "details": {
+        "months": "JUL-SEP",
+        "applied": 0,
+        "approved": 0,
+        "carryForword": 0,
+        "availed": 0,
+        "accrued": 0,
+        "balance": 0,
+        "canceled": 0
+      },
+      "value": "JUL-SEP",
+      "key": "SECOND"
+    },
+    {
+      "selected": false,
+      "details": {
+        "months": "OCT-DEC",
+        "applied": 0,
+        "approved": 0,
+        "carryForword": 0,
+        "availed": 0,
+        "accrued": 0,
+        "balance": 0,
+        "canceled": 0
+      },
+      "value": "OCT-DEC",
+      "key": "THIRD"
+    },
+    {
+      "selected": false,
+      "details": {
+        "months": "JAN-MAR",
+        "applied": 0,
+        "approved": 0,
+        "carryForword": 0,
+        "availed": 0,
+        "accrued": 0,
+        "balance": 0,
+        "canceled": 0
+      },
+      "value": "JAN-MAR",
+      "key": "FOURTH"
+    }
+  ],
+  "currentQuarterDetails": {
+    "months": "APR-JUN",
+    "applied": 0,
+    "approved": 0,
+    "carryForword": 0,
+    "availed": 0,
+    "accrued": 3,
+    "balance": 3,
+    "canceled": 0
+  },
+  "leaveType": [
+    {
+      "value": "Paid Time Off (PTO)",
+      "key": "PTO"
+    },
+    {
+      "value": "Maternity Leave",
+      "key": "ML"
+    },
+    {
+      "value": "Paternity Leave",
+      "key": "PL"
+    },
+    {
+      "value": "Compensatory-Off",
+      "key": "COF"
+    }
+  ],
+  "isCurrFY": true,
+  "leaveRecord": {
+    "fiscalYear": "2015-2016",
+    "numLeavesUtilized": 0,
+    "numLeavesScheduled": 0,
+    "numPTOLeavesLeft": 3,
+    "numCompOffsLeft": 0,
+    "numCompOffAccrued": 0,
+    "numCompOffAvailed": 0,
+    "numCompOffApplied": 0,
+    "numCompOffApproved": 0,
+    "numCompOffCarryFw": 0,
+    "empname": "Shikha Jain",
+    "totalLeave": 0,
+    "valid": true,
+    "allLeaves": [
+      
+    ],
+    "leavesUpcoming": [
+      
+    ],
+    "leavesHistory": [
+      
+    ],
+    "leavesApproved": [
+      
+    ],
+    "recordId": 5327
+  },
+  "threeFYs": [
+    "2015-2016",
+    "2014-2015",
+    "2013-2014"
+  ],
+  "selFY": "2015-2016",
+  "email": "shikha.jain@imaginea.com"
+}
