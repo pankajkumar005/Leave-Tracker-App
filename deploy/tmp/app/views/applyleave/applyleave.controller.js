@@ -1,21 +1,8 @@
 'use strict';
 
 angular.module('leaveTrackerAppApp')
-    .controller('ApplyleaveCtrl', function($scope, $location, $modalInstance) {
-        $scope.message = 'Hello';
-        $scope.leavetypes = [{
-            name: "Paid Time Off (PTO)",
-            code: "PTO"
-        }, {
-            name: "Maternity Leave",
-            code: "ML"
-        }, {
-            name: "Paternity Leave",
-            code: "PL"
-        }, {
-            name: "Compensatory-Off",
-            code: "COF"
-        }, ];
+    .controller('ApplyleaveCtrl', function($scope, $location, $modalInstance, holidayFactory, Scopes) {
+        $scope.type = {};
 
         $scope.cancleform = function() {
             $modalInstance.dismiss('cancel');
@@ -32,10 +19,35 @@ angular.module('leaveTrackerAppApp')
             }
         };
 
+        Scopes.store('ApplyleaveCtrl', $scope);
         $scope.apply = function() {
-            console.log($scope.fromdate.fdate.mDate);
-            console.log($scope.todate.tdate.mDate);
-            console.log($scope.leavetype);
-            console.log($scope.description);
+            var uprecord = {
+                "leaveRecordId": 4323,
+                "startDate": $scope.fromdate.fdate.mDate,
+                "endDate": $scope.todate.tdate.mDate,
+                "totalDays": 1,
+                "availedDays": 1,
+                "reason": $scope.description,
+                "impact": "",
+                "signature": "",
+                "type": $scope.type.code,
+                "status": "WAITING",
+                "candidateName": "Pankaj Kumar",
+                "leaveStartDate": "Jun-05-2015",
+                "leaveEndDate": "Jun-05-2015",
+                "leaveStatus": "Cancelled",
+                "leaveType": "PTO",
+                "leaveCancel": false,
+                "comments": "null",
+                "project": "Software AG",
+                "recordId": 16601
+            };
+            //Scopes.get('UpcomingCtrl').addrecord(uprecord);
+            var upcomingrecordlist = Scopes.get('UpcomingRecordList') || [];
+            upcomingrecordlist.push(uprecord);
+            Scopes.store('UpcomingRecordList',upcomingrecordlist);
+            $location.url('/upcoming');
+            $scope.cancleform();
         };
+
     });
