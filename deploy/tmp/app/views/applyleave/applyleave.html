@@ -1,1 +1,32 @@
-<h1 class="page-header head">Leave From</h1><form ng-submit="submit()"><div class="col1"><div class="from-date floatleft"><label>From Date</label><br/><input id="fromdatepicker" type="text" ng-model="fromdate.fdate.mDate" name="mDate" from-datepicker="from-datepicker"/></div><div class="to-date floatleft"><label>To Date</label><br/><input id="todatepicker" type="text" ng-model="todate.tdate.mDate" name="mDate" to-datepicker="to-datepicker"/></div></div><div class="col1"><div class="type type-margin"><label>Type</label><br/><select class="leavetype"><option value="">Select Leave Type</option><option value="PTO">Paid Time Off (PTO)</option><option value="ML">Maternity Leave</option><option value="PL">Paternity Leave</option><option value="COF">Compensatory-Off</option></select></div></div><div class="col1"><div class="description desc-margin"><label>Description</label><br/><textarea cols="50" rows="4"></textarea></div></div><div class="frmbtn"><button id="leaveapply" class="btn btn-primary">Apply</button><button id="leavecancel" ng-click="cancleform()" class="btn btn-default">Cancel</button></div></form>
+<div class="modal-header">
+	<h3 class="modal-title">Leave From</h3>
+</div>
+<div class="modal-body">
+	<form ng-submit="submit()">
+		<div class="col1">
+			<div class="from-date floatleft">
+				<label>From Date</label><br/>
+				<input id="fromdatepicker" type="text" ng-model="fromdate.fdate.mDate" name="mDate" from-datepicker="from-datepicker"/>
+			</div>
+			<div class="to-date floatleft">
+				<label>To Date</label><br/>
+				<input id="todatepicker" type="text" ng-model="todate.tdate.mDate" name="mDate" to-datepicker="to-datepicker"/>
+			</div>
+		</div>
+		<div class="col1">
+			<div class="type type-margin">
+				<label>Type</label><br/>
+				<select class="leavetype" ng-options="leavetype.code as leavetype.name for leavetype in leavetypes" ng-model="leavetype">
+					<option value="">Select Leave Type</option>
+				</select>
+			</div>
+		</div>
+		<div class="col1">
+			<div class="description desc-margin"><label>Description</label><br/><textarea cols="50" rows="4" ng-model="description"></textarea></div>
+		</div>
+		<div class="frmbtn">
+			<button id="leaveapply" class="btn btn-primary" ng-click="apply()">Apply</button>
+			<button id="leavecancel" ng-click="cancleform()" class="btn btn-default">Cancel</button>
+		</div>
+	</form>
+</div>
