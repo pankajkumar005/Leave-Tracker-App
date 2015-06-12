@@ -29,7 +29,7 @@ angular.module('leaveTrackerAppApp')
             },
             getData: function(requestparam) {
                 var deferred = $q.defer();
-                var httpPromise = $http.get('/assets/' + requestparam + '.json');
+                var httpPromise = $http.get('/deploy/assets/' + requestparam + '.json');
                 httpPromise.then(function(response) {
                     deferred.resolve(response);
                 }, function(error) {
