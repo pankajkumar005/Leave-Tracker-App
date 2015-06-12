@@ -10,4 +10,10 @@ angular.module('leaveTrackerAppApp', [
       .otherwise('/');
 
     $locationProvider.html5Mode(false);
-  });
+  })
+
+.run(function ($rootScope) {
+    $rootScope.$on('scope.stored', function (event, data) {
+        console.log("scope.stored", data);
+    });
+});

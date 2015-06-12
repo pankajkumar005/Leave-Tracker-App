@@ -20,15 +20,22 @@ app.directive('piechart', function(holidayFactory) {
         replace: true,
         //  scope: true,
         link: function(scope, element, attrs) {
-            scope.arr_category = [];
+            scope.arr_leavenum = [];
             holidayFactory.getLeaveCategory().then(function(response) {
-                var category = response;
-                angular.forEach(category, function(value, key) {
-                    this.push(value.value);
-                }, scope.arr_category);
+                scope.category = response;
                 bindData();
             });
-            console.log('After ajax call ' + new Date);
+            holidayFactory.getLeaveByType().then(function(response) {
+                var getleavetype = response;
+                angular.forEach(getleavetype, function(value, key) {
+                    this.push(value);
+                }, scope.arr_leavenum);
+                bindData();
+            });
+            holidayFactory.getUtilizedLeave().then(function(response) {
+                scope.getUleave = response;
+                bindData();
+            });
 
             function bindData() {
                 var colors = Highcharts.getOptions().colors,
@@ -38,17 +45,17 @@ app.directive('piechart', function(holidayFactory) {
                         color: colors[0],
                         drilldown: {
                             name: 'Remaining Leave',
-                            categories: scope.arr_category,
-                            data: [1, 5, 2, 2],
+                            categories: scope.category,
+                            data: [1, 4, 3, 2],
                             color: colors[0]
                         }
                     }, {
-                        y: 10,
+                        y: scope.getUleave,
                         color: colors[4],
                         drilldown: {
                             name: 'Availed Leaves',
-                            categories: scope.arr_category,
-                            data: [1, 4, 3, 2],
+                            categories: scope.category,
+                            data: scope.arr_leavenum,
                             color: colors[4]
                         }
                     }],

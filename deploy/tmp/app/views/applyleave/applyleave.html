@@ -2,27 +2,36 @@
 	<h3 class="modal-title">Leave From</h3>
 </div>
 <div class="modal-body">
-	<form ng-submit="submit()">
+	<form ng-submit="submit()" novalidate name="form" class="css-form">
 		<div class="col1">
-			<div class="from-date floatleft">
+			<div class="form-group from-date floatleft">
 				<label>From Date</label><br/>
-				<input id="fromdatepicker" type="text" ng-model="fromdate.fdate.mDate" name="mDate" from-datepicker="from-datepicker"/>
+				<input id="fromdatepicker" type="text" ng-model="fromdate.fdate.mDate" name="mDate" from-datepicker="from-datepicker" required/>
+				<br/>
+				<div ng-show="form.$submitted || form.mDate.$touched">
+					<div ng-show="form.mDate.$error.required">
+						Please enter the start date
+					</div>
+				</div>
 			</div>
-			<div class="to-date floatleft">
+			<div class="form-group to-date floatleft">
 				<label>To Date</label><br/>
 				<input id="todatepicker" type="text" ng-model="todate.tdate.mDate" name="mDate" to-datepicker="to-datepicker"/>
+				<div ng-show="form.$submitted || form.mDate.$touched">
+					<div ng-show="form.mDate.$error.required">
+						Please enter the end date
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="col1">
-			<div class="type type-margin">
+			<div class="form-group type type-margin">
 				<label>Type</label><br/>
-				<select class="leavetype" ng-options="leavetype.code as leavetype.name for leavetype in leavetypes" ng-model="leavetype">
-					<option value="">Select Leave Type</option>
-				</select>
+    			<leave-type selected-value="type"></leave-type>
 			</div>
 		</div>
 		<div class="col1">
-			<div class="description desc-margin"><label>Description</label><br/><textarea cols="50" rows="4" ng-model="description"></textarea></div>
+			<div class="form-group description desc-margin"><label>Description</label><br/><textarea cols="50" rows="4" ng-model="description"></textarea></div>
 		</div>
 		<div class="frmbtn">
 			<button id="leaveapply" class="btn btn-primary" ng-click="apply()">Apply</button>

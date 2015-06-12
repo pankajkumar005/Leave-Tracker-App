@@ -2,10 +2,6 @@
 
 angular.module('leaveTrackerAppApp')
     .controller('HomeCtrl', function($scope, holidayFactory, $location, $modal, $log) {
-        $scope.showfrom = function() {
-            $location.url('/applyleave');
-        };
-
         $scope.animationsEnabled = true;
 
         $scope.open = function(size) {
@@ -16,14 +12,10 @@ angular.module('leaveTrackerAppApp')
                 controller: 'ApplyleaveCtrl',
                 size: size,
                 resolve: {
-                    // items: function() {
-                    //     return $scope.items;
-                    // }
                 }
             });
 
             modalInstance.result.then(function(selectedItem) {
-                // $scope.selected = selectedItem;
             }, function() {
                 $log.info('Modal dismissed at: ' + new Date());
             });
