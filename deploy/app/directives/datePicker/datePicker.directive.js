@@ -8,8 +8,12 @@ angular.module('leaveTrackerAppApp')
             element.datepicker({
                 showOn:"both",
                 changeYear:true,
+                scope: {
+                    fromDatepicker: '=',
+                    required: '='
+                },
                 changeMonth:true,
-                dateFormat:'yy-mm-dd',
+                dateFormat:'M dd, yy',
                 maxDate: new Date(),
                 yearRange: '1920:2015',
                 onSelect:function (dateText, inst) {

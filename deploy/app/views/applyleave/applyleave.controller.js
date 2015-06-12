@@ -7,24 +7,13 @@ angular.module('leaveTrackerAppApp')
         $scope.cancleform = function() {
             $modalInstance.dismiss('cancel');
         };
-
-        $scope.fromdate = {
-            fdate: {
-                mDate: ''
-            }
-        };
-        $scope.todate = {
-            tdate: {
-                mDate: ''
-            }
-        };
-
+        
         Scopes.store('ApplyleaveCtrl', $scope);
         $scope.apply = function() {
             var uprecord = {
                 "leaveRecordId": 4323,
-                "startDate": $scope.fromdate.fdate.mDate,
-                "endDate": $scope.todate.tdate.mDate,
+                "startDate": $scope.fmDate,
+                "endDate": $scope.tDate,
                 "totalDays": 1,
                 "availedDays": 1,
                 "reason": $scope.description,

@@ -73,6 +73,12 @@ angular.module('leaveTrackerAppApp')
                 });
                 return promise;
             },
+            getPTOLeft: function() {
+                var promise = myService.getData("history").then(function(response) {
+                    return response.data.leaveRecord.numPTOLeavesLeft;
+                });
+                return promise;
+            },
             getLeaveByType: function() {
               var promise = myService.getData("history").then(function(response) {
                 var type = [];
