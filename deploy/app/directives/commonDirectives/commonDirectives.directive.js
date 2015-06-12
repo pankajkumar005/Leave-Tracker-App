@@ -36,17 +36,21 @@ app.directive('piechart', function(holidayFactory) {
                 scope.getUleave = response;
                 bindData();
             });
+            holidayFactory.getPTOLeft().then(function(response) {
+                scope.getPTOLeft = response;
+                bindData();
+            });
 
             function bindData() {
                 var colors = Highcharts.getOptions().colors,
                     categories = ['Remaining', 'Availed'],
                     data = [{
-                        y: 10,
+                        y: scope.getPTOLeft,
                         color: colors[0],
                         drilldown: {
                             name: 'Remaining Leave',
                             categories: scope.category,
-                            data: [1, 4, 3, 2],
+                            data: [scope.getPTOLeft, 0, 0, 0],
                             color: colors[0]
                         }
                     }, {

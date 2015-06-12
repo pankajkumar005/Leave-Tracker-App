@@ -3,13 +3,16 @@
 angular.module('leaveTrackerAppApp')
   .directive('leaveType', function () {
     return {
-        template: '<select ng-model="selectedValue" ng-options="t.name for t in types"></select>',
+        template: '<select required="true" ng-model="selectedValue" name= "selecttype" ng-options="t.name for t in types"></select>',
         restrict: 'E',
         scope: {
            selectedValue: '='
         },
         link:function(scope,elem,attrs){
            scope.types = [{
+	            name: "Please select type",
+	            code: ""
+	        },{
 	            name: "Paid Time Off (PTO)",
 	            code: "PTO"
 	        }, {
