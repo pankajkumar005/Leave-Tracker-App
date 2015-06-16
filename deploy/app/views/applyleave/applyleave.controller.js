@@ -1,13 +1,11 @@
-'use strict';
+    'use strict';
 
 angular.module('leaveTrackerAppApp')
     .controller('ApplyleaveCtrl', function($scope, $location, $modalInstance, holidayFactory, Scopes) {
         $scope.type = {};
-
         $scope.cancleform = function() {
             $modalInstance.dismiss('cancel');
         };
-        
         Scopes.store('ApplyleaveCtrl', $scope);
         $scope.apply = function() {
             var uprecord = {
@@ -22,8 +20,8 @@ angular.module('leaveTrackerAppApp')
                 "type": $scope.type.code,
                 "status": "WAITING",
                 "candidateName": "Pankaj Kumar",
-                "leaveStartDate": "Jun-05-2015",
-                "leaveEndDate": "Jun-05-2015",
+                "leaveStartDate": $scope.fmDate,
+                "leaveEndDate": $scope.tDate,
                 "leaveStatus": "Cancelled",
                 "leaveType": "PTO",
                 "leaveCancel": false,
@@ -31,12 +29,10 @@ angular.module('leaveTrackerAppApp')
                 "project": "Software AG",
                 "recordId": 16601
             };
-            //Scopes.get('UpcomingCtrl').addrecord(uprecord);
             var upcomingrecordlist = Scopes.get('UpcomingRecordList') || [];
             upcomingrecordlist.push(uprecord);
             Scopes.store('UpcomingRecordList',upcomingrecordlist);
             $location.url('/upcoming');
             $scope.cancleform();
         };
-
     });

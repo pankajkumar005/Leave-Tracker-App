@@ -248,3 +248,8 @@ ul.alert-dropdown {
         margin-right: 4%;
     }
 }
+#chart_container {
+    svg:not(:root) {
+        display:none;
+    }
+}

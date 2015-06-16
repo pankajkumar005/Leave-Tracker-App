@@ -13,7 +13,7 @@ angular.module('leaveTrackerAppApp')
                     required: '='
                 },
                 changeMonth:true,
-                dateFormat:'M dd, yy',
+                dateFormat:'M-dd-yy',
                 maxDate: new Date(),
                 yearRange: '1920:2015',
                 onSelect:function (dateText, inst) {
@@ -34,7 +34,7 @@ angular.module('leaveTrackerAppApp')
                 showOn:"both",
                 changeYear:true,
                 changeMonth:true,
-                dateFormat:'yy-mm-dd',
+                dateFormat:'M-dd-yy',
                 maxDate: new Date(),
                 yearRange: '1920:2015',
                 onSelect:function (dateText, inst) {
