@@ -41,5 +41,4 @@ angular.module('leaveTrackerAppApp')
             $location.url('/upcoming');
             $scope.cancleform();
         };
-
     });

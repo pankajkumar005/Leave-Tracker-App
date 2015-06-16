@@ -14,8 +14,7 @@ angular.module('leaveTrackerAppApp')
                 },
                 changeMonth:true,
                 dateFormat:'M-dd-yy',
-                maxDate: new Date(),
-                yearRange: '1920:2015',
+                yearRange: '2015:2017',
                 onSelect:function (dateText, inst) {
                     scope.$apply(function(scope){
                         // Change binded variable
@@ -35,8 +34,7 @@ angular.module('leaveTrackerAppApp')
                 changeYear:true,
                 changeMonth:true,
                 dateFormat:'M-dd-yy',
-                maxDate: new Date(),
-                yearRange: '1920:2015',
+                yearRange: '2015:2017',
                 onSelect:function (dateText, inst) {
                     scope.$apply(function(scope){
                         // Change binded variable

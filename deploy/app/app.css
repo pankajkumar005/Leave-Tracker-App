@@ -2087,3 +2087,8 @@ ul.alert-dropdown {
 .amcharts-chart-div a {
     display: none !important;
 } 
+
+
+.navbar-inverse .navbar-nav > li > a > i{
+  margin-right: 10px;
+}
