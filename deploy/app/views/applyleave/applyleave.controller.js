@@ -3,9 +3,11 @@
 angular.module('leaveTrackerAppApp')
     .controller('ApplyleaveCtrl', function($scope, $location, $modalInstance, holidayFactory, Scopes) {
         $scope.type = {};
+
         $scope.cancleform = function() {
             $modalInstance.dismiss('cancel');
         };
+        
         Scopes.store('ApplyleaveCtrl', $scope);
         $scope.apply = function() {
             var uprecord = {
@@ -29,10 +31,15 @@ angular.module('leaveTrackerAppApp')
                 "project": "Software AG",
                 "recordId": 16601
             };
+            console.log(uprecord);
+            localStorage.setItem( 'uprecord', JSON.stringify(uprecord));
+            console.log(angular.fromJson(localStorage.getItem('uprecord')));
+            //Scopes.get('UpcomingCtrl').addrecord(uprecord);
             var upcomingrecordlist = Scopes.get('UpcomingRecordList') || [];
             upcomingrecordlist.push(uprecord);
             Scopes.store('UpcomingRecordList',upcomingrecordlist);
             $location.url('/upcoming');
             $scope.cancleform();
         };
+
     });

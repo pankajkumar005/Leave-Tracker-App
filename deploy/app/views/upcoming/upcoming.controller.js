@@ -8,8 +8,16 @@ angular.module('leaveTrackerAppApp')
         holidayFactory.getUpcomingDetails().then(function(response) {
             $scope.upcomingRecord = response;
             Scopes.store('UpcomingRecordList', $scope.upcomingRecord);
+            // localStorage.setItem("UpcomingRecordList", JSON.stringify($scope.upcomingRecord));
+            // console.log(localStorage.getItem("UpcomingRecordList"));
         });
-    }else {
+    } /*else if (localStorage.length != 0) {
+        console.log(JSON.stringify(Scopes.get('UpcomingRecordList')));
+        localStorage.setItem( 'UpcomingRecordList', JSON.stringify(Scopes.get('UpcomingRecordList')));
+        console.log(localStorage.getItem("UpcomingRecordList"));
+        $scope.upcomingRecord = $scope.$eval(localStorage.getItem("UpcomingRecordList"));
+        localStorage.removeItem("UpcomingRecordList");
+    }*/ else {
         $scope.upcomingRecord = Scopes.get('UpcomingRecordList');
     }
   });
