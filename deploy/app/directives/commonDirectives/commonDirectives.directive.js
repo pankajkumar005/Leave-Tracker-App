@@ -12,8 +12,6 @@ app.directive('makeBold', function() {
     }
 })
 app.directive('piechart', function(holidayFactory) {
-
-
     return {
         template: '<div id="chart_container" style="margin: 0 auto">not working</div>',
         restrict: 'E',
@@ -21,123 +19,66 @@ app.directive('piechart', function(holidayFactory) {
         //  scope: true,
         link: function(scope, element, attrs) {
             scope.arr_leavenum = [];
-            holidayFactory.getLeaveCategory().then(function(response) {
-                scope.category = response;
-                bindData();
-            });
-            holidayFactory.getLeaveByType().then(function(response) {
-                var getleavetype = response;
-                angular.forEach(getleavetype, function(value, key) {
+            scope.arr_leavelist = [];
+
+            holidayFactory.getQuarterDetails().then(function(response) {
+                var getleavelist = response;
+                angular.forEach(getleavelist[0], function(value, key) {
                     this.push(value);
-                }, scope.arr_leavenum);
-                bindData();
-            });
-            holidayFactory.getUtilizedLeave().then(function(response) {
-                scope.getUleave = response;
-                bindData();
-            });
-            holidayFactory.getPTOLeft().then(function(response) {
-                scope.getPTOLeft = response;
+                }, scope.arr_leavelist);
+                console.log(scope.arr_leavelist[3] + scope.arr_leavelist[5]);
                 bindData();
             });
 
             function bindData() {
-                var colors = Highcharts.getOptions().colors,
-                    categories = ['Remaining', 'Availed'],
-                    data = [{
-                        y: scope.getPTOLeft,
-                        color: colors[0],
-                        drilldown: {
-                            name: 'Remaining Leave',
-                            categories: scope.category,
-                            data: [scope.getPTOLeft, 0, 0, 0],
-                            color: colors[0]
-                        }
-                    }, {
-                        y: scope.getUleave,
-                        color: colors[4],
-                        drilldown: {
-                            name: 'Availed Leaves',
-                            categories: scope.category,
-                            data: scope.arr_leavenum,
-                            color: colors[4]
-                        }
+                var gaugeChart = AmCharts.makeChart("chart_container", {
+                    "type": "gauge",
+                    "theme": "none",
+                    
+                    "axes": [{
+                        "axisThickness": 30,
+                        "axisAlpha": 0.2,
+                        "tickAlpha": 0.2,
+                        "valueInterval": 1,
+                        "axisColor": "#EF7209",
+                        "bands": [{
+                            "color": "#84b761",
+                            "endValue": scope.arr_leavelist[5],
+                            "startValue": scope.arr_leavelist[3]
+                        }, {
+                            "color": "#EF7209",
+                            "endValue": scope.arr_leavelist[3],
+                            "innerRadius": "95%",
+                            "startValue": 0
+                        }],
+                        "bottomText": "0",
+                        "bottomTextYOffset": -20,
+                        "endValue": (scope.arr_leavelist[3] + scope.arr_leavelist[5] - 1)
                     }],
-                    LeaveStatus = [],
-                    LeaveType = [],
-                    i,
-                    j,
-                    dataLen = data.length,
-                    drillDataLen,
-                    brightness;
+                    "arrows": [{}],
+                    "export": {
+                        "enabled": true
+                    }, 
 
+                });
 
-                // Build the data arrays
-                for (i = 0; i < dataLen; i += 1) {
-
-                    // add browser data
-                    LeaveStatus.push({
-                        name: categories[i],
-                        y: data[i].y,
-                        color: data[i].color
-                    });
-
-                    // add version data
-                    drillDataLen = data[i].drilldown.data.length;
-                    for (j = 0; j < drillDataLen; j += 1) {
-                        brightness = 0.2 - (j / drillDataLen) / 5;
-                        LeaveType.push({
-                            name: data[i].drilldown.categories[j],
-                            y: data[i].drilldown.data[j],
-                            color: Highcharts.Color(data[i].color).brighten(brightness).get()
-                        });
+                setInterval(randomValue, 2000);
+                // set random value
+                function randomValue() {
+                    var value = ((scope.arr_leavelist[3] + scope.arr_leavelist[5]) - scope.arr_leavelist[4]);
+                    //var value = -2
+                    if (gaugeChart) {
+                        if (gaugeChart.arrows) {
+                            if (gaugeChart.arrows[0]) {
+                                if (gaugeChart.arrows[0].setValue) {
+                                    gaugeChart.arrows[0].setValue(value);
+                                    gaugeChart.axes[0].setBottomText(value + "");
+                                }
+                            }
+                        }
                     }
                 }
-                // Create the chart
-                $('#chart_container').highcharts({
-                    chart: {
-                        type: 'pie'
-                    },
-                    title: {
-                        text: ''
-                    },
-
-                    plotOptions: {
-                        pie: {
-                            shadow: false,
-                            center: ['50%', '50%']
-                        }
-                    },
-                    tooltip: {
-                        valueSuffix: ''
-                    },
-                    series: [{
-                        name: 'Leave',
-                        data: LeaveStatus,
-                        size: '60%',
-                        dataLabels: {
-                            formatter: function() {
-                                return this.point.name;
-                            },
-                            color: 'blue',
-                            distance: -30
-                        }
-                    }, {
-                        name: 'Leave',
-                        data: LeaveType,
-                        size: '80%',
-                        innerSize: '60%',
-                        dataLabels: {
-                            formatter: function() {
-                                // display only if larger than 1
-                                return this.point.name + ': ' + this.y;
-                            },
-                            color: 'blue',
-                        }
-                    }]
-                });
             }
         }
     }
 })
-
