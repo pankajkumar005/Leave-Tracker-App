@@ -8,8 +8,8 @@
 				</thead>
 				<tbody>
 					<tr ng-repeat="x in upcomingRecord">
-						<td>{{ x.startDate }}</td>
-						<td>{{ x.endDate }}</td><td>{{ x.type }}</td><td>{{ x.totalDays }}</td><td>{{ x.reason }}</td>
+						<td>{{ x.leaveStartDate }}</td>
+						<td>{{ x.leaveEndDate }}</td><td>{{ x.type }}</td><td>{{ x.totalDays }}</td><td>{{ x.reason }}</td>
 						<td>{{ x.status }}</td>
 						<td>
 							<a ng-href="/" ng-click="open()" target="_self">Edit</a>|<a ng-href="#/" target="_self">Cancel</a>
