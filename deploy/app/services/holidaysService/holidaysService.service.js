@@ -37,6 +37,20 @@ angular.module('leaveTrackerAppApp')
                 });
                 return deferred.promise;
             },
+            getQuarterDetails: function() {
+                var promise = myService.getData("data").then(function(response) {
+                    var quaterlist = [];
+                    angular.forEach(response.data.quarterList, function(value, key) {
+                    if(value.selected == true)
+                    {
+                        this.push(value.details);
+                    }
+                   },quaterlist);
+                    console.log(JSON.stringify(quaterlist));
+                    return quaterlist;
+                });
+                return promise;
+            },
             getLeaveCategory: function() {
                 var promise = myService.getData("data").then(function(response) {
                     var category = [];
@@ -86,7 +100,6 @@ angular.module('leaveTrackerAppApp')
                 var mcount = 0;
                 var pcount = 0;
                 var ccount = 0;
-                console.log(response.data.leaveRecord.leavesHistory);
                   angular.forEach(response.data.leaveRecord.allLeaves, function(value, key) {
                     if(value.status != "CANCELLED")
                     {  
