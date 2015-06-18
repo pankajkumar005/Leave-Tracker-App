@@ -8,7 +8,6 @@ angular.module('leaveTrackerAppApp')
             $modalInstance.dismiss('cancel');
         };
         
-        Scopes.store('ApplyleaveCtrl', $scope);
         $scope.apply = function() {
             var uprecord = {
                 "leaveRecordId": 4323,
