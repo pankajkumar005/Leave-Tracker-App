@@ -13,8 +13,9 @@ angular.module('leaveTrackerAppApp')
                     required: '='
                 },
                 changeMonth:true,
-                dateFormat:'M-dd-yy',
+                dateFormat:'M/dd/yy',
                 yearRange: '2015:2017',
+                minDate: 0,
                 onSelect:function (dateText, inst) {
                     scope.$apply(function(scope){
                         // Change binded variable
@@ -33,8 +34,9 @@ angular.module('leaveTrackerAppApp')
                 showOn:"both",
                 changeYear:true,
                 changeMonth:true,
-                dateFormat:'M-dd-yy',
+                dateFormat:'M/dd/yy',
                 yearRange: '2015:2017',
+                minDate: 0,
                 onSelect:function (dateText, inst) {
                     scope.$apply(function(scope){
                         // Change binded variable

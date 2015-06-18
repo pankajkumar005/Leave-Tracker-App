@@ -1,7 +1,7 @@
     'use strict';
 
 angular.module('leaveTrackerAppApp')
-    .controller('ApplyleaveCtrl', function($scope, $location, $modalInstance, holidayFactory, Scopes) {
+    .controller('ApplyleaveCtrl', function($scope, $location, $modalInstance, holidayFactory, $localstorage) {
         $scope.type = {};
 
         $scope.cancleform = function() {
@@ -31,13 +31,10 @@ angular.module('leaveTrackerAppApp')
                 "project": "Software AG",
                 "recordId": 16601
             };
-            console.log(uprecord);
-            localStorage.setItem( 'uprecord', JSON.stringify(uprecord));
-            console.log(angular.fromJson(localStorage.getItem('uprecord')));
-            //Scopes.get('UpcomingCtrl').addrecord(uprecord);
-            var upcomingrecordlist = Scopes.get('UpcomingRecordList') || [];
+
+            var upcomingrecordlist = $localstorage.getObject('uprecord') || [];
             upcomingrecordlist.push(uprecord);
-            Scopes.store('UpcomingRecordList',upcomingrecordlist);
+            $localstorage.setObject('uprecord', upcomingrecordlist);
             $location.url('/upcoming');
             $scope.cancleform();
         };

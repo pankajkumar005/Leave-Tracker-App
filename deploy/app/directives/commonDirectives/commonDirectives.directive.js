@@ -23,6 +23,7 @@ app.directive('piechart', function(holidayFactory) {
 
             holidayFactory.getQuarterDetails().then(function(response) {
                 var getleavelist = response;
+                console.log(getleavelist);
                 angular.forEach(getleavelist[0], function(value, key) {
                     this.push(value);
                 }, scope.arr_leavelist);
@@ -33,14 +34,12 @@ app.directive('piechart', function(holidayFactory) {
             function bindData() {
                 var gaugeChart = AmCharts.makeChart("chart_container", {
                     "type": "gauge",
-                    "theme": "none",
-                    
+                    "theme": "light",
                     "axes": [{
-                        "axisThickness": 30,
+                        "axisThickness": 10,
                         "axisAlpha": 0.2,
-                        "tickAlpha": 0.2,
+                        "tickAlpha": 1.2,
                         "valueInterval": 1,
-                        "axisColor": "#EF7209",
                         "bands": [{
                             "color": "#84b761",
                             "endValue": scope.arr_leavelist[5],
@@ -51,22 +50,18 @@ app.directive('piechart', function(holidayFactory) {
                             "innerRadius": "95%",
                             "startValue": 0
                         }],
-                        "bottomText": "0",
+                        "bottomText": "0 km/h",
                         "bottomTextYOffset": -20,
                         "endValue": (scope.arr_leavelist[3] + scope.arr_leavelist[5] - 1)
                     }],
-                    "arrows": [{}],
-                    "export": {
-                        "enabled": true
-                    }, 
-
+                    "arrows": [{}]
                 });
 
                 setInterval(randomValue, 2000);
+
                 // set random value
                 function randomValue() {
                     var value = ((scope.arr_leavelist[3] + scope.arr_leavelist[5]) - scope.arr_leavelist[4]);
-                    //var value = -2
                     if (gaugeChart) {
                         if (gaugeChart.arrows) {
                             if (gaugeChart.arrows[0]) {

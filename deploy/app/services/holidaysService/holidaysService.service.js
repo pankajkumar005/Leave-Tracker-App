@@ -4,28 +4,15 @@ angular.module('leaveTrackerAppApp')
     .factory('holidayFactory', function($q, $http) {
         var myService = {
             getThings: function() {
-                var promise = $http.get('/api/things').then(function(response) {
-                    return response.data;
+                var deferred = $q.defer();
+                var httpPromise = $http.get('http://corridor.pramati.com/appsPortal/apps/leave/my-leaves');
+                httpPromise.then(function(response) {
+                    deferred.resolve(response);
+                }, function(error) {
+                    console.error(error);
                 });
-                return promise;
-            },
-            getHolidayList: function() {
-                var promise = myService.getData("data").then(function(response) {
-                    return response.data.hol;
-                });
-                return promise;
-            },
-            addHoliday: function(dd, mm, yyyy) {
-                var promise = $http.post('/api/holidays/' + dd + '/' + mm + '/' + yyyy).then(function(response) {
-                    return response.data;
-                });
-                return promise;
-            },
-            deleteHoliday: function(id) {
-                var promise = $http.post('/api/holidays/' + id).then(function(response) {
-                    response.data;
-                });
-                return promise;
+                return deferred.promise;
+
             },
             getData: function(requestparam) {
                 var deferred = $q.defer();
@@ -69,7 +56,8 @@ angular.module('leaveTrackerAppApp')
                 return promise;
             },
             getHistoryDetails: function() {
-                var promise = myService.getData("history").then(function(response) {
+                // var promise = myService.getData("history").then(function(response) {
+                var promise = myService.getThings().then(function(response) {
                     myService.getLeaveByType();
                     return response.data.leaveRecord.leavesHistory;
                 });
@@ -121,19 +109,14 @@ angular.module('leaveTrackerAppApp')
               });
               return promise;
             },
+            // addLeave: function(data) {
+            //     console.log(data.startDate);
+            //      var promise = $http.post('http://corridor.pramati.com/appsPortal/apps/leave/submit?'+ 'leaveType=PTO&reason=TESTING&leaveStartDate=06/05/2015&leaveEndDate=06/05/2015&leaveDays=1&leaveRecordId=4325').then(function(response) {
+            //      // var promise = $http.post('http://corridor.pramati.com/appsPortal/apps/leave/submit?'+ 'leaveType='+ data.type +'&reason=TESTING&leaveStartDate='+ data.leaveStartDate+'&leaveEndDate='+ data.leaveEndDate +'&leaveDays=1&leaveRecordId=4325').then(function(response) {
+            //         console.log(response.data);
+            //     });
+            //     return promise;
+            // },
         };
         return myService;
     })
-    .factory('Scopes', function($rootScope) {
-        var mem = {};
-
-        return {
-            store: function(key, value) {
-                $rootScope.$emit('scope.stored', key);
-                mem[key] = value;
-            },
-            get: function(key) {
-                return mem[key];
-            }
-        };
-    });
