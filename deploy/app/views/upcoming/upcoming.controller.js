@@ -1,23 +1,17 @@
 'use strict';
 
 angular.module('leaveTrackerAppApp')
-  .controller('UpcomingCtrl', function($scope, holidayFactory, Scopes, $location) {
-    Scopes.store('UpcomingCtrl', $scope);
-    if (!Scopes.get('UpcomingRecordList')) {
-        window.holidayLoadFlag = 0;
+  .controller('UpcomingCtrl', function($scope, holidayFactory, $location, $localstorage) {   
+    $scope.removeRow = function (productIndex) {
+      $scope.upcomingRecord.splice(productIndex, 1);
+    }
+    if (localStorage.getItem('uprecord') == null) {
         holidayFactory.getUpcomingDetails().then(function(response) {
             $scope.upcomingRecord = response;
-            Scopes.store('UpcomingRecordList', $scope.upcomingRecord);
-            // localStorage.setItem("UpcomingRecordList", JSON.stringify($scope.upcomingRecord));
-            // console.log(localStorage.getItem("UpcomingRecordList"));
+            $localstorage.setObject('uprecord', $scope.upcomingRecord);
         });
-    } /*else if (localStorage.length != 0) {
-        console.log(JSON.stringify(Scopes.get('UpcomingRecordList')));
-        localStorage.setItem( 'UpcomingRecordList', JSON.stringify(Scopes.get('UpcomingRecordList')));
-        console.log(localStorage.getItem("UpcomingRecordList"));
-        $scope.upcomingRecord = $scope.$eval(localStorage.getItem("UpcomingRecordList"));
-        localStorage.removeItem("UpcomingRecordList");
-    }*/ else {
-        $scope.upcomingRecord = Scopes.get('UpcomingRecordList');
+    } else {
+      console.log('getting from localstrorage',$localstorage.getObject('uprecord'));
+      $scope.upcomingRecord = $localstorage.getObject('uprecord');
     }
-  });
+  }); 
