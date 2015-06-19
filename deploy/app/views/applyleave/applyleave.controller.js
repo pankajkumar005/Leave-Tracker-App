@@ -7,13 +7,13 @@ angular.module('leaveTrackerAppApp')
         $scope.cancleform = function() {
             $modalInstance.dismiss('cancel');
         };
-        
+        console.log(($scope.tDate - $scope.fmDate) / (1000 * 60 * 60 * 24));
         $scope.apply = function() {
             var uprecord = {
                 "leaveRecordId": 4323,
                 "startDate": $scope.fmDate,
                 "endDate": $scope.tDate,
-                "totalDays": 1,
+                "totalDays": 2,
                 "availedDays": 1,
                 "reason": $scope.description,
                 "impact": "",

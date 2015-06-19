@@ -4,13 +4,22 @@ angular.module('leaveTrackerAppApp')
     .controller('HomeCtrl', function($scope, holidayFactory, $location, $modal, $log) {
         $scope.animationsEnabled = true;
 
-        $scope.open = function(size) {
+        $scope.open = function(modaltype) {
 
+            if(modaltype == "wfh")
+            {
+                var templateUrl = 'app/views/workfromhome/workfromhome.html';
+                var controller = 'WorkfromhomeCtrl';
+            }
+            else
+            {
+                var templateUrl = 'app/views/applyleave/applyleave.html';
+                var controller = 'ApplyleaveCtrl';
+            }
             var modalInstance = $modal.open({
                 animation: $scope.animationsEnabled,
-                templateUrl: 'app/views/applyleave/applyleave.html',
-                controller: 'ApplyleaveCtrl',
-                size: size,
+                templateUrl: templateUrl,
+                controller: controller,
                 resolve: {
                 }
             });

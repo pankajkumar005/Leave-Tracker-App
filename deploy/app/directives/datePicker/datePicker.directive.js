@@ -7,6 +7,9 @@ angular.module('leaveTrackerAppApp')
         $(function(){
             element.datepicker({
                 showOn:"both",
+                buttonText: 'Show Date',
+                buttonImageOnly: true,
+                buttonImage: '../assets/images/calender.svg',
                 changeYear:true,
                 scope: {
                     fromDatepicker: '=',
@@ -32,6 +35,9 @@ angular.module('leaveTrackerAppApp')
         $(function(){
             element.datepicker({
                 showOn:"both",
+                buttonText: 'Show Date',
+                buttonImageOnly: true,
+                buttonImage: '../assets/images/calender.svg',
                 changeYear:true,
                 changeMonth:true,
                 dateFormat:'M/dd/yy',
