@@ -37,6 +37,13 @@ angular.module('leaveTrackerAppApp')
                 });
                 return promise;
             },
+            getTeamWFHDetails: function() {
+                var promise = myService.getData("wfh").then(function(response) {
+                    console.log("wfh team", response.data.teamwfhlist);
+                    return response.data.teamwfhlist;
+                });
+                return promise;
+            },
             getQuarterDetails: function() {
                 var promise = myService.getData("data").then(function(response) {
                     var quaterlist = [];
@@ -62,7 +69,7 @@ angular.module('leaveTrackerAppApp')
                 });
                 return promise;
             },
-            getHistoryDetails: function(flag = false) {
+            getHistoryDetails: function(flag) {
                 if(flag == true)
                 {
                     var getSource =  myService.getThings('my-leaves');                 
@@ -73,12 +80,26 @@ angular.module('leaveTrackerAppApp')
                 }
                 
                 var promise = getSource.then(function(response) {
-                    myService.getLeaveByType();
+                    
                     return response.data.leaveRecord.leavesHistory;
                 });
                 return promise;
             },
-            getUpcomingDetails: function(flag = false) {
+            getTeamHistoryDetails: function(flag) {
+                if(flag == true)
+                {
+                    var getSource =  myService.getThings('my-teamleaves');                 
+                }
+                else
+                {
+                    var getSource = myService.getData("teamleave");                    
+                }
+                var promise = getSource.then(function(response) {
+                    return response.data.teamhist;
+                });
+                return promise;
+            },
+            getUpcomingDetails: function(flag) {
                 if(flag == true)
                 {
                     var getSource =  myService.getThings('my-leaves');                 

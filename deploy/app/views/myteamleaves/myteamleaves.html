@@ -1,0 +1,52 @@
+<div class="row">
+   <div class="tbl_view">
+      <h2>Team Leaves</h2>
+      <div class="table-responsive hover">
+      <span ng-show="!record.length">No Team leave found</span>
+         <table class="table table-bordered table-hover table-striped" ng-show="(record | filter:criteria).length">
+            <thead>
+               <tr>
+                  <th>Employee Name</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Type</th>
+                  <th>Duration</th>
+                  <th>Reason</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr ng-repeat="x in record">
+           		  <td>{{ x.candidateName }}</td>
+           		  <!-- <td><a href="" tooltip-html-unsafe="{{myTooltip()}}">{{ x.candidateName }}</a></td> -->
+                  <td>{{ x.startDate }}</td>
+                  <td>{{ x.endDate }}</td>
+                  <td>{{ x.type }}</td>
+                  <td>{{ x.totalDays }}</td>
+                  <td>{{ x.reason }}</td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- hidden by default -->
+          <div class="tooltip-content">
+          <table class="table">
+            <thead>
+               <tr>
+                  <th>Year</th>
+                  <th>Leave Utilized</th>
+                  <th>Leave Schedule</th>
+                  <th>PTO Left</th>
+               </tr>
+            </thead>
+            <tbody>
+               <!-- <tr ng-repeat="x in record">
+           		  <td>{{ x.fiscalYear }}</td>
+           		  <td>{{ x.numLeavesUtilized }}</td>
+                  <td>{{ x.numLeavesScheduled }}</td>
+                  <td>{{ x.numPTOLeavesLeft }}</td>
+               </tr> -->
+            </tbody>
+         </table>
+      </div>
+      </div>
+   </div>
+</div>

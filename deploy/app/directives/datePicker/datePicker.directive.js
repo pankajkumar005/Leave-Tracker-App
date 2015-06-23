@@ -16,7 +16,7 @@ angular.module('leaveTrackerAppApp')
                     required: '='
                 },
                 changeMonth:true,
-                dateFormat:'M/dd/yy',
+                dateFormat:'M-dd-yy',
                 yearRange: '2015:2017',
                 minDate: 0,
                 onSelect:function (dateText, inst) {
@@ -40,7 +40,7 @@ angular.module('leaveTrackerAppApp')
                 buttonImage: '../assets/images/calender.svg',
                 changeYear:true,
                 changeMonth:true,
-                dateFormat:'M/dd/yy',
+                dateFormat:'M-dd-yy',
                 yearRange: '2015:2017',
                 minDate: 0,
                 onSelect:function (dateText, inst) {

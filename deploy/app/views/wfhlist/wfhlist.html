@@ -1,0 +1,26 @@
+<div class="row">
+   <div class="tbl_view">
+      <h2>Team WFH</h2>
+      <div class="table-responsive">
+      <span ng-show="!wfhTeamRecord.length">No Record found</span>
+         <table class="table table-bordered table-hover table-striped" ng-show="(wfhTeamRecord | filter:criteria).length">
+          <thead>
+               <tr>
+                  <th>Employee Name</th>
+                  <th>From Date</th>
+                  <th>To Date</th>
+                  <th>Reason</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr ng-repeat="w in wfhTeamRecord">
+                  <td >{{ w.empName }}</td> 
+                  <td >{{ w.from }}</td> 
+                  <td>{{ w.to }}</td>
+                  <td>{{ w.reason }}</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+</div>

@@ -1,14 +1,202 @@
 {
   "mywfhlist": [
     {
-      "from": "Jun-22-2015",
-      "to": "Jun-23-2015",
-      "days": "2",
-      "recordId": 1804
+      "from": "Sep-30-2014",
+      "to": "Sep-30-2014",
+      "days": "1",
+      "recordId": 274
     }
   ],
   "teamwfhlist": [
-    
+    {
+      "empId": "10804",
+      "empName": "Tom",
+      "from": "Jun-19-2015",
+      "to": "Jun-19-2015",
+      "days": "1",
+      "reason": "Due to some personal work, to be present at home",
+      "recordId": 1795
+    },
+    {
+      "empId": "10804",
+      "empName": "Tom",
+      "from": "May-25-2015",
+      "to": "May-25-2015",
+      "days": "1",
+      "reason": "Unable to commute to office due to body ache",
+      "recordId": 1604
+    },
+    {
+      "empId": "11020",
+      "empName": "Aaron",
+      "from": "May-19-2015",
+      "to": "May-19-2015",
+      "days": "1",
+      "reason": "Have to oversee the painting work happening at home as no one else is there to monitor",
+      "recordId": 1544
+    },
+    {
+      "empId": "10854",
+      "empName": "john",
+      "from": "May-14-2015",
+      "to": "May-14-2015",
+      "days": "1",
+      "reason": "Have some personal work for an hour in the afternoon.",
+      "recordId": 1497
+    },
+    {
+      "empId": "11020",
+      "empName": "Aaron",
+      "from": "May-11-2015",
+      "to": "May-11-2015",
+      "days": "1",
+      "reason": "Had to be in home to support the painting \u0026 electric work happening in home",
+      "recordId": 1469
+    },
+    {
+      "empId": "10804",
+      "empName": "Tom",
+      "from": "Apr-29-2015",
+      "to": "Apr-29-2015",
+      "days": "1",
+      "reason": "Need to be present at home as my wife needs to go to doctor for post surgery visit",
+      "recordId": 1368
+    },
+    {
+      "empId": "10804",
+      "empName": "Tom",
+      "from": "Apr-17-2015",
+      "to": "Apr-17-2015",
+      "days": "1",
+      "reason": "Need to be present at home for support in case of any need",
+      "recordId": 1274
+    },
+    {
+      "empId": "11020",
+      "empName": "Aaron",
+      "from": "Apr-15-2015",
+      "to": "Apr-15-2015",
+      "days": "1",
+      "reason": "Had to see the doctor for the elbow fracture check up.",
+      "recordId": 1254
+    },
+    {
+      "empId": "11020",
+      "empName": "Aaron",
+      "from": "Apr-09-2015",
+      "to": "Apr-09-2015",
+      "days": "1",
+      "reason": "Had a 2hr program of receiving the ppl who are making an explicit visit for me",
+      "recordId": 1206
+    },
+    {
+      "empId": "11020",
+      "empName": "Aaron",
+      "from": "Apr-02-2015",
+      "to": "Apr-02-2015",
+      "days": "1",
+      "reason": "Facing some infection on my leg which is making it difficult to walk",
+      "recordId": 1156
+    },
+    {
+      "empId": "11020",
+      "empName": "Aaron",
+      "from": "Feb-27-2015",
+      "to": "Feb-27-2015",
+      "days": "1",
+      "reason": "Going outstation today evening \u0026 also have a doctor visit.",
+      "recordId": 930
+    },
+    {
+      "empId": "11020",
+      "empName": "Aaron",
+      "from": "Feb-13-2015",
+      "to": "Feb-13-2015",
+      "days": "1",
+      "reason": "Had to go to hospital for examination ",
+      "recordId": 858
+    },
+    {
+      "empId": "11020",
+      "empName": "Aaron",
+      "from": "Jan-19-2015",
+      "to": "Jan-28-2015",
+      "days": "7",
+      "reason": "Recovering from accident to hand.  ",
+      "recordId": 857
+    },
+    {
+      "empId": "10804",
+      "empName": "Tom",
+      "from": "Feb-06-2015",
+      "to": "Feb-06-2015",
+      "days": "1",
+      "reason": "Have to be present at home today, bcoz my wife is not feeling well",
+      "recordId": 813
+    },
+    {
+      "empId": "10804",
+      "empName": "Tom",
+      "from": "Jan-16-2015",
+      "to": "Jan-16-2015",
+      "days": "1",
+      "reason": "going to my hometown for Sankranti Festival",
+      "recordId": 723
+    },
+    {
+      "empId": "11020",
+      "empName": "Aaron",
+      "from": "Jan-02-2015",
+      "to": "Jan-13-2015",
+      "days": "8",
+      "reason": "Rest needed for the  accident hand",
+      "recordId": 666
+    },
+    {
+      "empId": "11020",
+      "empName": "Aaron",
+      "from": "Dec-15-2014",
+      "to": "Dec-15-2014",
+      "days": "1",
+      "reason": "To assist my parents who are on a travel plan with heavy luggage.",
+      "recordId": 590
+    },
+    {
+      "empId": "10804",
+      "empName": "Tom",
+      "from": "Oct-24-2014",
+      "to": "Oct-24-2014",
+      "days": "1",
+      "reason": "Have to go to my home town",
+      "recordId": 359
+    },
+    {
+      "empId": "10441",
+      "empName": "Caron",
+      "from": "Oct-08-2014",
+      "to": "Oct-08-2014",
+      "days": "1",
+      "reason": "Not well",
+      "recordId": 296
+    },
+    {
+      "empId": "10441",
+      "empName": "Caron",
+      "from": "Sep-11-2014",
+      "to": "Sep-11-2014",
+      "days": "1",
+      "reason": "Not well",
+      "recordId": 180
+    },
+    {
+      "empId": "11020",
+      "empName": "Aaron",
+      "from": "Sep-02-2014",
+      "to": "Sep-02-2014",
+      "days": "1",
+      "reason": "Fall sick with heavy throat pain \u0026 slight fever",
+      "recordId": 130
+    }
   ],
   "holidays": [
     "Jan 01, 2014",
@@ -36,11 +224,6 @@
     "June 02,2015"
   ],
   "cancelwfhlist": [
-    {
-      "from": "Jun-22-2015",
-      "to": "Jun-23-2015",
-      "days": "2",
-      "recordId": 1804
-    }
+    
   ]
 }

@@ -14,6 +14,14 @@ angular.module('leaveTrackerAppApp')
       'title': 'Histroy',
       'link': '#/history',
       'class':"fa fa-fw fa-table"
+    },{
+      'title': 'Team Leave',
+      'link': '#/teamleave',
+      'class':"fa fa-fw fa-table"
+    },{
+      'title': 'Team WFH',
+      'link': '#/wfhlist',
+      'class':"fa fa-fw fa-table"
     }
     ];
 
