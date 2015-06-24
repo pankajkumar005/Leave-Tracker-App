@@ -76,4 +76,16 @@ app.directive('piechart', function(holidayFactory) {
             }
         }
     }
-})
+});
+
+app.directive('hover', ['$compile','$interpolate', function($compile,$interpolate){
+  return{
+    restrict: 'C',
+    link: function(scope,element,attrs){
+      scope.myTooltip = function() {
+        var content = $(element).find('.tooltip-content');
+        return $interpolate(content.html())(scope);
+      };
+    }
+  }
+}])

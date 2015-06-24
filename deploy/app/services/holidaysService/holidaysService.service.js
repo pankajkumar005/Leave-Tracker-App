@@ -3,26 +3,46 @@
 angular.module('leaveTrackerAppApp')
     .factory('holidayFactory', function($q, $http) {
         var myService = {
-            getThings: function() {
+            getUrl: function()
+            {
+                var url = "http://corridor.pramati.com/appsPortal/apps/leave/";
+                return url;
+            },
+            getThings: function(request) {
                 var deferred = $q.defer();
-                var httpPromise = $http.get('http://corridor.pramati.com/appsPortal/apps/leave/my-leaves');
+                var geturl = myService.getUrl();
+                console.log(geturl + request);
+                var httpPromise = $http.get(geturl+ request);
                 httpPromise.then(function(response) {
                     deferred.resolve(response);
                 }, function(error) {
                     console.error(error);
                 });
                 return deferred.promise;
-
             },
             getData: function(requestparam) {
                 var deferred = $q.defer();
                 var httpPromise = $http.get('/deploy/assets/' + requestparam + '.json');
                 httpPromise.then(function(response) {
                     deferred.resolve(response);
+                    console.log(response);
                 }, function(error) {
                     console.error(error);
                 });
                 return deferred.promise;
+            },
+            getWFHDetails: function() {
+                var promise = myService.getData("wfh").then(function(response) {
+                    return response.data.mywfhlist;
+                });
+                return promise;
+            },
+            getTeamWFHDetails: function() {
+                var promise = myService.getData("wfh").then(function(response) {
+                    console.log("wfh team", response.data.teamwfhlist);
+                    return response.data.teamwfhlist;
+                });
+                return promise;
             },
             getQuarterDetails: function() {
                 var promise = myService.getData("data").then(function(response) {
@@ -49,22 +69,46 @@ angular.module('leaveTrackerAppApp')
                 });
                 return promise;
             },
-            getCurrentQuarterDetails: function() {
-                var promise = myService.getData("data").then(function(response) {
-                    return response.data.currentQuarterDetails;
-                });
-                return promise;
-            },
-            getHistoryDetails: function() {
-                // var promise = myService.getData("history").then(function(response) {
-                var promise = myService.getThings().then(function(response) {
-                    myService.getLeaveByType();
+            getHistoryDetails: function(flag) {
+                if(flag == true)
+                {
+                    var getSource =  myService.getThings('my-leaves');                 
+                }
+                else
+                {
+                    var getSource = myService.getData("history");                    
+                }
+                
+                var promise = getSource.then(function(response) {
+                    
                     return response.data.leaveRecord.leavesHistory;
                 });
                 return promise;
             },
-            getUpcomingDetails: function() {
-                var promise = myService.getData("history").then(function(response) {
+            getTeamHistoryDetails: function(flag) {
+                if(flag == true)
+                {
+                    var getSource =  myService.getThings('my-teamleaves');                 
+                }
+                else
+                {
+                    var getSource = myService.getData("teamleave");                    
+                }
+                var promise = getSource.then(function(response) {
+                    return response.data.teamhist;
+                });
+                return promise;
+            },
+            getUpcomingDetails: function(flag) {
+                if(flag == true)
+                {
+                    var getSource =  myService.getThings('my-leaves');                 
+                }
+                else
+                {
+                    var getSource = myService.getData("history");                    
+                }
+                var promise = getSource.then(function(response) {
                     return response.data.leaveRecord.leavesUpcoming;
                 });
                 return promise;

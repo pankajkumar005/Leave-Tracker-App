@@ -2,17 +2,30 @@
 	<div class="tbl_view">
 		<h2>Upcoming Leaves</h2>
 		<div class="table-responsive">
-			<table class="table table-bordered table-hover table-striped">
+			<span ng-show="!upcomingRecord.length">No Upcoming leave found</span>
+			<table class="table table-bordered table-hover table-striped" ng-show="(upcomingRecord | filter:criteria).length">
 				<thead>
-					<tr><th>Start Date</th><th>End Date</th><th>Type</th><th>Duration</th><th>Reason</th><th>Status</th><th></th></tr>
+					<tr>
+						<th>Start Date</th>
+						<th>End Date</th>
+						<th>Type</th>
+						<th>Duration</th>
+						<th>Reason</th>
+						<th>Status</th>
+						<th></th>
+					</tr>
 				</thead>
 				<tbody>
 					<tr ng-repeat="x in upcomingRecord track by $index">
 						<td >{{ x.leaveStartDate }}</td> 
-						<td>{{ x.leaveEndDate }}</td><td>{{ x.type }}</td><td>{{ x.totalDays }}</td><td>{{ x.reason }}</td>
+						<td>{{ x.leaveEndDate }}</td>
+						<td>{{ x.type }}</td>
+						<td>{{ x.totalDays }}</td>
+						<td>{{ x.reason }}</td>
 						<td>{{ x.status }}</td>
 						<td>
-							<a ng-href="/" ng-click="open()" target="_self">Edit</a>|<a ng-href="" ng-click="removeRow($index)" target="">Cancel</a>
+							<a ng-href="" ng-click="open2(x.leaveRecordId)" target="_self">Edit</a>|
+							<a ng-href="" ng-click="removeRow($index)" target="">Cancel</a>
 						</td>
 					</tr>
 				</tbody>
@@ -20,3 +33,33 @@
 		</div>
 	</div>
 </div>
+
+<div class="row">
+	<div class="tbl_view">
+		<h2>WFH</h2>
+		<div class="table-responsive">
+			<span ng-show="!wfhRecord.length">No WFH record found</span>
+			<table class="table table-bordered table-hover table-striped" ng-show="(wfhRecord | filter:criteria).length">
+				<thead>
+					<tr>
+						<th>From Date</th>
+						<th>To Date</th>
+						<th>Reason</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="w in wfhRecord track by $index">
+						<td >{{ w.from }}</td> 
+						<td>{{ w.to }}</td>
+						<td>{{ w.reason }}</td>
+						<td>
+							<a ng-href="" ng-click="removeWFHRow($index)" target="">Cancel</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+

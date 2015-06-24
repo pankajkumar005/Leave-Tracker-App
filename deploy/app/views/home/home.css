@@ -253,3 +253,13 @@ ul.alert-dropdown {
         display:none;
     }
 }
+
+.btn-col{
+    float: right;
+    margin-right: 10%;
+}
+.wfh{
+    display: block;     
+    margin-left: 8px;
+}
+

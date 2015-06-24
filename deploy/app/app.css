@@ -2038,8 +2038,7 @@ ul.alert-dropdown {
   top: 12%;
 }
 .module-home-page .apply-btn {
-  float: right;
-  margin-right: 4%;
+  font-size: 22px;
 }
 .thing-form {
   margin: 20px 0;
@@ -2095,4 +2094,8 @@ svg:not(:root) {
 
 .navbar-inverse .navbar-nav > li > a > i{
   margin-right: 10px;
+}
+
+.hover .tooltip-content{
+  display: none;
 }
