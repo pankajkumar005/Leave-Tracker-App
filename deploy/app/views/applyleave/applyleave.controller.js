@@ -7,21 +7,7 @@ angular.module('leaveTrackerAppApp')
         $scope.cancleform = function() {
             $modalInstance.dismiss('cancel');
         };
-        $scope.dayDiff = function(firstDate,secondDate){
-          var date2 = new Date($scope.formatString(secondDate));
-          var date1 = new Date($scope.formatString(firstDate));
-          var timeDiff = Math.abs(date2.getTime() - date1.getTime());   
-          $scope.dayDifference = Math.ceil(timeDiff / (1000 * 3600 * 24));
-          return $scope.dayDifference;
-         }
-          
-        $scope.formatString = function(format) {
-            var month   = parseInt(format.substring(0,2));
-            var day  = parseInt(format.substring(3,5));
-            var year   = parseInt(format.substring(6,10));
-            var date = new Date(year, month-1, day);
-            return date;
-          }
+            
         if(leaveRecordId == null)
         {
             $scope.apply = function() {
@@ -37,8 +23,8 @@ angular.module('leaveTrackerAppApp')
                     "impact": "",
                     "signature": "",
                     "type": $scope.type.code,
-                    "status": "WAITING",
-                    "candidateName": "Pankaj Kumar",
+                    "status": "APPLIED",
+                    "candidateName": "Pankaj Kumar"+$scope.itemCount,
                     "leaveStartDate": $scope.fmDate,
                     "leaveEndDate": $scope.tDate,
                     "leaveStatus": "Cancelled",

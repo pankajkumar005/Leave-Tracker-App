@@ -31,6 +31,12 @@ angular.module('leaveTrackerAppApp')
                 });
                 return deferred.promise;
             },
+            getRequestDetails: function() {
+                var promise = myService.getData("approveleave").then(function(response) {
+                    return response.data.leaves2Approve;
+                });
+                return promise;
+            },
             getWFHDetails: function() {
                 var promise = myService.getData("wfh").then(function(response) {
                     return response.data.mywfhlist;

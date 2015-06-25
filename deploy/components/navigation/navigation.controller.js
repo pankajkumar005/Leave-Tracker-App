@@ -22,6 +22,10 @@ angular.module('leaveTrackerAppApp')
       'title': 'Team WFH',
       'link': '#/wfhlist',
       'class':"fa fa-fw fa-table"
+    },{
+      'title': 'Approval',
+      'link': '#/request',
+      'class':"fa fa-fw fa-table"
     }
     ];
 

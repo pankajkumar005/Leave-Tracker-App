@@ -3,15 +3,19 @@
 angular.module('leaveTrackerAppApp')
     .controller('UpcomingCtrl', function($scope, holidayFactory, $location, $localstorage, $modal, $log) {
         $scope.removeRow = function(productIndex) {
+            var upcomingrecordobj = JSON.parse(localStorage.uprecord); 
+            upcomingrecordobj.splice(productIndex, 1);
+            localStorage.uprecord = JSON.stringify(upcomingrecordobj);
             $scope.upcomingRecord.splice(productIndex, 1);
+
         }
         $scope.removeWFHRow = function(productIndex) {
+            var wfhobj = JSON.parse(localStorage.wfhRecord); 
+            wfhobj.splice(productIndex, 1);
+            localStorage.wfhRecord = JSON.stringify(wfhobj);
             $scope.wfhRecord.splice(productIndex, 1);
         }
         $scope.open2 = function(leaveRecord) {
-            console.log('in open');
-            console.log('leaveRecord' + leaveRecord);
-
             var templateUrl = 'app/views/applyleave/applyleave.html';
             var controller = 'ApplyleaveCtrl';
 
@@ -30,26 +34,22 @@ angular.module('leaveTrackerAppApp')
                 $log.info('Modal dismissed at: ' + new Date());
             });
         }
-
-
         if (localStorage.getItem('uprecord') == null) {
             holidayFactory.getUpcomingDetails().then(function(response) {
                 $scope.upcomingRecord = response;
                 $localstorage.setObject('uprecord', $scope.upcomingRecord);
             });
         } else {
-            console.log('getting from localstrorage', $localstorage.getObject('uprecord'));
             $scope.upcomingRecord = $localstorage.getObject('uprecord');
         }
 
         if (localStorage.getItem('wfhRecord') == null) {
             holidayFactory.getWFHDetails().then(function(response) {
                 $scope.wfhRecord = response;
-                console.log("wfh" + $scope.wfhRecord);
                 $localstorage.setObject('wfhRecord', $scope.wfhRecord);
             });
         } else {
-            console.log('getting from localstrorage', $localstorage.getObject('wfhRecord'));
             $scope.wfhRecord = $localstorage.getObject('wfhRecord');
         }
     });
+
