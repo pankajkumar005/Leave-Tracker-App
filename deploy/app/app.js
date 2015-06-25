@@ -3,7 +3,8 @@
 angular.module('leaveTrackerAppApp', [
   'ui.router',
   'ngRoute',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ngGrid'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider

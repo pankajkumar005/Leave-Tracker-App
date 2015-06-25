@@ -1,0 +1,29 @@
+{
+  "leaves2Approve": [
+    {
+      "leaveRecordId": 4325,
+      "startDate": "Jun 23, 2015 5:30:00 AM",
+      "endDate": "Jun 23, 2015 5:30:00 AM",
+      "totalDays": 1,
+      "availedDays": 1,
+      "reason": "",
+      "impact": "",
+      "signature": "",
+      "type": "PTO",
+      "status": "APPLIED",
+      "candidateName": "Pankaj Kumar",
+      "leaveStartDate": "Jun-23-2015",
+      "leaveEndDate": "Jun-23-2015",
+      "leaveStatus": "Applied",
+      "leaveType": "PTO",
+      "leaveCancel": true,
+      "comments": "",
+      "project": "Software AG",
+      "recordId": 16949
+    }
+  ],
+  "approveHistory": [
+    
+  ],
+  "email": "kapil.k@imaginea.com"
+}
