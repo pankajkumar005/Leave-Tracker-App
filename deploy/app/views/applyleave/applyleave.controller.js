@@ -1,17 +1,26 @@
     'use strict';
 
 angular.module('leaveTrackerAppApp')
-    .controller('ApplyleaveCtrl', function($scope, $location, $modalInstance, holidayFactory, $localstorage, leaveRecordId) {
+    .controller('ApplyleaveCtrl', function($scope, $location, $modalInstance, holidayFactory, $localstorage, leaveRecordId, $modal, $log) {
         $scope.type = {};
         $scope.itemCount;
         $scope.cancleform = function() {
             $modalInstance.dismiss('cancel');
         };
-            
+
         if(leaveRecordId == null)
-        {
-            $scope.apply = function() {
+        {   
+            $scope.confirmmodal = function() {
+            var templateUrl = 'confirmmodal.html';
+            var controller = 'ConfirmModalInstanceCtrl';
+            if(localStorage.uprecord)
+            {
                 $scope.itemCount = JSON.parse(localStorage.uprecord).length + 1;
+            }
+            else
+            {
+                $scope.itemCount = 1;   
+            }
 
                 var uprecord = {
                     "leaveRecordId": $scope.itemCount,
@@ -34,13 +43,26 @@ angular.module('leaveTrackerAppApp')
                     "project": "Software AG",
                     "recordId": 16601
                 };
+            var modalInstance = $modal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: templateUrl,
+                size: 'sm',
+                controller: controller,
+                resolve: {
+                    uprecord: function(){
+                      return uprecord;
+                    },
+                    instance: function(){
+                        return $modalInstance;
+                    }
+                }
+            });
 
-                var upcomingrecordlist = $localstorage.getObject('uprecord') || [];
-                upcomingrecordlist.push(uprecord);
-                $localstorage.setObject('uprecord', upcomingrecordlist);
-                $location.url('/upcoming');
-                $scope.cancleform();
-            };
+            modalInstance.result.then(function(selectedItem) {}, function() {
+                $log.info('Modal dismissed at: ' + new Date());
+            });
+        }
+           
         }
         else
         {
@@ -72,7 +94,32 @@ angular.module('leaveTrackerAppApp')
             localStorage.uprecord = JSON.stringify(arrlog);
             $scope.cancleform();
             }
-
         }
 
     });
+
+    angular.module('leaveTrackerAppApp')
+.controller('ConfirmModalInstanceCtrl', function ($scope, $modalInstance, uprecord, $location, holidayFactory, $localstorage, instance) {
+
+console.log("upreocrd", uprecord);
+console.log("upreocrd obj", $localstorage.getObject('uprecord'));
+ $scope.apply = function() {
+                if(!localStorage.uprecord)
+                {
+                    var upcomingrecordlist = new Array();
+                }else
+                {
+                    var upcomingrecordlist = $localstorage.getObject('uprecord');
+                }
+                upcomingrecordlist.push(uprecord);
+                $localstorage.setObject('uprecord', upcomingrecordlist);
+                $location.url('/upcoming');
+                instance.dismiss('cancel');
+                $scope.cancel();
+            };
+
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+    instance.dismiss('cancel');
+  };
+});

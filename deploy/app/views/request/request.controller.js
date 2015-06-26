@@ -41,7 +41,9 @@ angular.module('leaveTrackerAppApp')
                 }
                 this.push(value);
             }, arrlog);
-          
+      	// var histroyrecordlist = $localstorage.getObject('histroy') || [];
+       //  histroyrecordlist.push(arrlog);
+       //  $localstorage.setObject('histroy', histroyrecordlist);
     	localStorage.uprecord = JSON.stringify(arrlog);
         $scope.log.splice(productIndex, 1);
     }
