@@ -35,8 +35,23 @@
 			<div class="form-group description desc-margin"><label>Description</label><br/><textarea cols="50" rows="4" ng-model="description"></textarea></div>
 		</div>
 		<div class="frmbtn">
-			<button  class="btn btn-primary" ng-click="apply()" ng-disabled="form.$invalid" >Apply</button>
+			<button  class="btn btn-primary" ng-click="confirmmodal()" ng-disabled="form.$invalid" >Apply</button>
 			<button id="leavecancel" ng-click="cancleform()" class="btn btn-default">Cancel</button>
 		</div>
 	</form>
 </div>
+
+<script type="text/ng-template" id="confirmmodal.html">
+<div class="modal-header">
+    <h3 class="modal-title">Confirmation</h3>
+</div>
+<div class="row">
+	<div class="confirm-box">
+		<span>Are you sure you want to apply leave?</span>
+		<div class="confirm-btn">
+			<button ng-click="apply()"	class="btn btn-lg btn-primary">Apply</button>
+			<button ng-click="cancel()"	class="btn btn-lg btn-primary">Cancle</button>
+		</div>
+	</div>
+</div>
+</script>
