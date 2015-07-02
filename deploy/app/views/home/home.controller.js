@@ -6,13 +6,10 @@ angular.module('leaveTrackerAppApp')
 
         $scope.open = function(modaltype, recordid) {
 
-            if(modaltype == "wfh")
-            {
+            if (modaltype == "wfh") {
                 var templateUrl = 'app/views/workfromhome/workfromhome.html?id=0';
                 var controller = 'WorkfromhomeCtrl';
-            }
-            else
-            {
+            } else {
                 var templateUrl = 'app/views/applyleave/applyleave.html';
                 var controller = 'ApplyleaveCtrl';
             }
@@ -21,14 +18,13 @@ angular.module('leaveTrackerAppApp')
                 templateUrl: templateUrl,
                 controller: controller,
                 resolve: {
-                    leaveRecordId: function(){
-                      return null;
+                    leaveRecordId: function() {
+                        return null;
                     }
                 }
             });
 
-            modalInstance.result.then(function(selectedItem) {
-            }, function() {
+            modalInstance.result.then(function(selectedItem) {}, function() {
                 $log.info('Modal dismissed at: ' + new Date());
             });
         };

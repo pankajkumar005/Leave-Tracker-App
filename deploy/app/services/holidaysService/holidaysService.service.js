@@ -50,16 +50,14 @@ angular.module('leaveTrackerAppApp')
                 });
                 return promise;
             },
-            getQuarterDetails: function() {
+            getCurrentQuarterDetails: function() {
                 var promise = myService.getData("data").then(function(response) {
                     var quaterlist = [];
-                    angular.forEach(response.data.quarterList, function(value, key) {
-                    if(value.selected == true)
-                    {
-                        this.push(value.details);
-                    }
+                    angular.forEach(response.data.currentQuarterDetails, function(value, key) {
+                    console.log("key", key);
+                    this.push(value);
                    },quaterlist);
-                    console.log(JSON.stringify(quaterlist));
+                    console.log(quaterlist);
                     return quaterlist;
                 });
                 return promise;

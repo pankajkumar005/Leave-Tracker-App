@@ -89,10 +89,10 @@
     "months": "APR-JUN",
     "applied": 0,
     "approved": 0,
-    "carryForword": 0,
-    "availed": 0,
-    "accrued": 3,
-    "balance": 3,
+    "carryForword": 5,
+    "availed": 3,
+    "accrued": 5,
+    "balance": 7,
     "canceled": 0
   },
   "leaveType": [
