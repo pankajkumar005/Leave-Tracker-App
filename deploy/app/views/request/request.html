@@ -3,7 +3,7 @@
 		<h2>Leaves Request</h2>
 		<div class="row">
 			<span ng-show="!log.length">No record found</span>
-			<div class="col-md-4 colsep event-body" ng-repeat="x in log track by $index" ng-show="(log | filter:criteria).length">
+			<div class="col-xs-2 colsep event-body" ng-repeat="x in log track by $index" ng-show="(log | filter:criteria).length">
 				<div class="panel panel-default panelcus">
 					<div class="panel-body">{{x.candidateName}}</div>
 				</div>
@@ -13,7 +13,7 @@
 						<span>
 							<a ng-href="" ng-click="approve($index, x.leaveRecordId)" target="_self">Approve</a>|
 							<a ng-href="" ng-click="rejectmodal($index, x.leaveRecordId)" target="">Reject</a>|
-							<a ng-href="" ng-click="" target="" tooltip-template="'myTooltipTemplate.html'" tooltip-class="customClass" tooltip-animation="false" tooltip-placement="right" >Details</a>
+							<span tooltip-template="'myTooltipTemplate.html'" tooltip-class="customClass" tooltip-animation="false" tooltip-placement="right" >Details</span>
 						</span>
 					</div>
 				</div>
