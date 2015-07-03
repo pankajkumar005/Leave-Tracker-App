@@ -28,17 +28,23 @@ app.directive('piechart', function(holidayFactory) {
 
             function updateChart(details)
             {
-                var a1start, a1end, a1b1text, a1b2text, a1b1color, a1b1start, a1b1end, a1b2color, a1b2start, a1b2end;
-                var a2start, a2end, a2b1text, a2b2text, a2b1color, a2b1start, a2b1end, a2b2color, a2b2start, a2b2end;
+                var a1startangle, a1endangle, a1start, a1end, a1b1text, a1b2text, a1b1color, a1b1start, a1b1end, a1b2color, a1b2start, a1b2end;
+                var a2startangle, a2endangle, a2start, a2end, a2b1text, a2b2text, a2b1color, a2b1start, a2b1end, a2b2color, a2b2start, a2b2end;
                 if(details[3] < 0 && details[6] < 0)
                 {
-                    a1b1text = "Negative Balance Leave";
-                    a1b2text = "";
+                    a1startangle = -120;
+                    a1endangle = 90;
+                    a2startangle = -90;
+                    a2endangle = 120;
 
-                    a2b1text = "";
+                    a1b1text = "Negative Balance Leave";
+                    a1b2text = "Availed Leaves";
+
+                    a2b1text = "Accured Leaves";
                     a2b2text = "Negative Carryforward Leave";
+                    
                     a1start = details[6];
-                    a2start = details[6];
+                    a2start = 0;
                     a1end  = details[5];
                     a2end  = details[5];
 
@@ -46,12 +52,12 @@ app.directive('piechart', function(holidayFactory) {
                     a1b1start = details[6];
                     a1b1end = 0;
 
-                    a1b2color = "#FFF";
+                    a1b2color = "red";
                     a1b2start = 0;
                     a1b2end = details[5];
 
-                    a2b1color = "#FFF";
-                    a2b1start = details[6];
+                    a2b1color = "orange";
+                    a2b1start = 0;
                     a2b1end = details[3]+details[5];
 
                     a2b2color = "black";
@@ -60,10 +66,15 @@ app.directive('piechart', function(holidayFactory) {
                 }
                 else if(details[3] < 0)
                 {
-                    a1b1text = "Balance Leave";
-                    a1b2text = "";
+                    a1startangle = -90;
+                    a1endangle = 90;
+                    a2startangle = -90;
+                    a2endangle = 120;
 
-                    a2b1text = "";
+                    a1b1text = "Balance Leave";
+                    a1b2text = "Availed Leave";
+
+                    a2b1text = "Accured Leave";
                     a2b2text = "Negative Carryforward Leave";
                     a1start = 0;
                     a2start = 0;
@@ -74,11 +85,11 @@ app.directive('piechart', function(holidayFactory) {
                     a1b1start = 0;
                     a1b1end = details[6];
 
-                    a1b2color = "#FFF";
+                    a1b2color = "red";
                     a1b2start = details[6];
                     a1b2end = details[5];
                     
-                    a2b1color = "#FFF";
+                    a2b1color = "orange";
                     a2b1start = 0;
                     a2b1end = details[3]+details[5];
 
@@ -88,20 +99,26 @@ app.directive('piechart', function(holidayFactory) {
                 }
                 else if(details[6] < 0)
                 {
+                    a1startangle = -120;
+                    a1endangle = 90;
+                    a2startangle = -90;
+                    a2endangle = 90;
+
                     a1b1text = "Balance Leave";
-                    a1b2text = "";
+                    a1b2text = "Availed Leave";
 
                     a2b1text = "Accured Leave";
-                    a2b2text = "";
+                    a2b2text = "Carryforward Leave";
                     a1start = details[6];
-                    a2start = details[6];
+                    a2start = 0;
+                    
                     a1end  = details[5] + details[3];
                     a2end  = details[5] + details[3];
                     a1b1color = "black";
                     a1b1start = details[6];
                     a1b1end = 0;
 
-                    a1b2color = "#FFF";
+                    a1b2color = "red";
                     a1b2start = 0;
                     a1b2end = details[6] + details[4];
                    
@@ -115,6 +132,11 @@ app.directive('piechart', function(holidayFactory) {
                 }
                 else
                 {
+                    a1startangle = -90;
+                    a1endangle = 90;
+                    a2startangle = -90;
+                    a2endangle = 90;
+
                     a1b1text = "Balance Leave";
                     a1b2text = "Availed Leave";
 
@@ -142,6 +164,10 @@ app.directive('piechart', function(holidayFactory) {
                     a2b2end = details[5] + details[3];
                 }
                 var arrupdate = {
+                    "a1startangle" : a1startangle,
+                    "a1endangle" : a1endangle,
+                    "a2startangle" : a2startangle,
+                    "a2endangle" : a2endangle,
                     "a1b1text"  : a1b1text,
                     "a1b2text"  : a1b2text,
                     "a2b1text"  : a2b1text,
@@ -172,9 +198,11 @@ app.directive('piechart', function(holidayFactory) {
                     "type": "gauge",
                     "theme": "light",
                     "axes": [{
+                        "labelOffset": 1,
+                       "labelFrequency": 2,
                         "bottomTextYOffset": -106,
-                        "startAngle": -90,
-                        "endAngle": 90,
+                        "startAngle": scope.updateval.a1startangle,
+                        "endAngle": scope.updateval.a1endangle,
                         "radius": "80%",
                         "axisThickness": 1,
                         "valueInterval": 1,
@@ -186,7 +214,7 @@ app.directive('piechart', function(holidayFactory) {
                                 "color": scope.updateval.a1b1color,
                                 "startValue": scope.updateval.a1b1start,
                                 "endValue": scope.updateval.a1b1end,
-                                "innerRadius": "85%",
+                                "innerRadius": "90%",
                                 "radius": "99%",
                             },
                             {
@@ -194,7 +222,7 @@ app.directive('piechart', function(holidayFactory) {
                                 "color": scope.updateval.a1b2color,
                                 "startValue": scope.updateval.a1b2start,
                                 "endValue": scope.updateval.a1b2end,
-                                "innerRadius": "85%",
+                                "innerRadius": "90%",
                                 "radius": "99%",
                             }
                         ],
@@ -202,8 +230,10 @@ app.directive('piechart', function(holidayFactory) {
                         "startValue": scope.updateval.a1start,
                     },
                     {
-                        "startAngle": -90,
-                        "endAngle": 90,
+                        "labelOffset": 1,
+                       "labelFrequency": 2,
+                        "startAngle": scope.updateval.a2startangle,
+                        "endAngle": scope.updateval.a2endangle,
                         "axisColor": "#000",
                         "axisThickness": 1,
                         "endValue": scope.updateval.a2end,
