@@ -165,9 +165,9 @@ app.directive('piechart', function(holidayFactory) {
                 }
                 var arrupdate = {
                     "a1startangle" : a1startangle,
-                    "a1endangle" : a1endangle,
+                    "a1endangle"   : a1endangle,
                     "a2startangle" : a2startangle,
-                    "a2endangle" : a2endangle,
+                    "a2endangle"   : a2endangle,
                     "a1b1text"  : a1b1text,
                     "a1b2text"  : a1b2text,
                     "a2b1text"  : a2b1text,
@@ -287,31 +287,21 @@ app.directive('piechart', function(holidayFactory) {
     }
 });
 
-app.directive('hover', ['$compile','$interpolate', function($compile,$interpolate){
-  return{
-    restrict: 'C',
-    link: function(scope,element,attrs){
-      scope.myTooltip = function() {
-        var content = $(element).find('.tooltip-content');
-        return $interpolate(content.html())(scope);
-      };
-    }
-  }
-}]);
-
-app.directive('ngConfirmClick',  function() {
+app.directive('dropdown', function(){
     return {
-      priority: 1,
-      link: function(scope, element, attr) {
-        var msg = attr.ngConfirmClick || "Are you sure?";
-        var clickAction = attr.ngClick;
-        attr.ngClick = "";
-        element.bind('click', function(event) {
-          if (window.confirm(msg)) {
-            scope.$eval(clickAction)
-          }
-        });
-      }
+        restrict: 'E',
+        scope: {
+            array: '='
+        },
+        template:'<label>{{label}}</label><br/>' +
+                    '<select ng-model="ngModel" ng-options="a for a in array">' +
+                        '<option style="display: none" value="">-- {{title}} --</option>' +
+                    '</select>',
+        link: function (scope, element, attrs) {
+            scope.label = attrs.label;   
+            scope.title = attrs.title;
+            scope.optValue = attrs.optValue;
+            scope.optDescription = attrs.optDescription;
+        }
     };
-  }
-)
+});

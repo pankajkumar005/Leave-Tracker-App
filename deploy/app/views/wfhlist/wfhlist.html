@@ -1,6 +1,24 @@
-<div class="row">
+<div class="crow">
    <div class="tbl_view">
       <h2>Team WFH</h2>
+      <div class="div-filter">
+      <dropdown array="empname" opt-value="empName" opt-description="empName" title="Choose Name" label="Names"></dropdown>
+         <div class="form-group from-date floatleft">
+            <label>From Date</label><br/>
+            <input id="fromdatepicker" type="text" ng-model="fmDate" name="fmDate" from-datepicker="from-datepicker" class="" />
+            <br/>
+            <div ng-show="form.fmDate.$dirty && form.fmDate.$invalid && form.fmDate.$error.required" class="control-label">
+               Please enter the start date
+            </div>
+         </div>
+         <div class="form-group to-date">
+            <label>To Date</label><br/>
+            <input id="todatepicker" type="text" ng-model="tDate" name="tDate" to-datepicker="to-datepicker" />
+            <div ng-show="form.tDate.$dirty && form.tDate.$invalid && form.tDate.$error.required" class="control-label" >
+               Please enter the end date
+            </div>
+         </div>
+      </div>
       <div class="table-responsive">
       <span ng-show="!wfhTeamRecord.length">No Record found</span>
          <table class="table table-bordered table-hover table-striped" ng-show="(wfhTeamRecord | filter:criteria).length">
@@ -9,7 +27,6 @@
                   <th>Employee Name</th>
                   <th>From Date</th>
                   <th>To Date</th>
-                  <th>Reason</th>
                </tr>
             </thead>
             <tbody>
@@ -17,7 +34,6 @@
                   <td >{{ w.empName }}</td> 
                   <td >{{ w.from }}</td> 
                   <td>{{ w.to }}</td>
-                  <td>{{ w.reason }}</td>
                </tr>
             </tbody>
          </table>
