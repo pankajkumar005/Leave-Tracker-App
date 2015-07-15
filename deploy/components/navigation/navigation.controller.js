@@ -26,6 +26,10 @@ angular.module('leaveTrackerAppApp')
       'title': 'Approval',
       'link': '#/request',
       'class':"fa fa-fw fa-table"
+    },{
+      'title': 'Reports',
+      'link': '#/reports',
+      'class':"fa fa-fw fa-table"
     }
     ];
 

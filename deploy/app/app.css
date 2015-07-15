@@ -2165,3 +2165,43 @@ transform: translateY(-100%);
 .confirm-btn{
   margin-top: 5%;
 }
+
+.crow{
+  padding-top: 33px;
+}
+
+.div-filter{
+  width: 100%;
+  display: inline-block;
+
+}
+
+.div-filter dropdown{
+  float: left;
+}
+.div-filter .form-group{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.div-filter .form-group input{
+  position: relative;
+  top: -9%;
+}
+
+.div-filter .form-group label {
+    margin-bottom: 0px;
+}
+
+#linechar {
+  width : 100%;
+  height  : 500px;
+}          
+.update-btn{
+  margin-top: 5.5%;
+}       
+
+.to-date-btn{
+  float: left;
+  margin-right: 2%;
+}
